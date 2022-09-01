@@ -1,7 +1,7 @@
 # Front End Developer & Graphic Designer
-Name: Ariel Loza
-Email: ariellozam.dev@gmail.com
-Website: (ARIELOZAM)[https://arielozam.xyz]
+ - Name: Ariel Loza
+ - Email: ariellozam.dev@gmail.com
+ - Website: (https://arielozam.xyz)[ARIELOZAM]
 
 ### Social Media:
 - LinkedIn
