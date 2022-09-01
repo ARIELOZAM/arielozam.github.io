@@ -1,4 +1,14 @@
-# arielozam
- Mi sitio Personal con un Extra
- 
- here is the link: [ARIELOZAM](https://arielozam.github.io/arielozam)
+# Front End Developer & Graphic Designer
+Name: Ariel Loza
+Email: ariellozam.dev@gmail.com
+Website: (ARIELOZAM)[https://arielozam.xyz]
+
+### Social Media:
+- LinkedIn
+- Facebook
+- Intagram
+- GitHub
+
+
+## About Me
+I love to create code projects or design
