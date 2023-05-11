@@ -1,7 +1,7 @@
 # Front End Developer & Graphic Designer
  - Name: Ariel Loza
  - Email: ariellozam.dev@gmail.com
- - Website: (https://arielozam.netlify.app)[ARIELOZAM]
+ - Website:[ARIELOZAM] (https://arielozam.netlify.app)
 ### Social Media:
 - LinkedIn
 - Facebook
