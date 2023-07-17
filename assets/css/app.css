@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "airstrikeregular";
+    src: url("../fonts/airstrike-webfont.woff2") format("woff2"),
+      url("../fonts/airstrike-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "poppinsregular";
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+  }
+.hv-100 {
+    display: block;
+    height: 100vh;
+}
+body {
+    background-color: #212121;
+}
+* {
+    color: white;
+}
+h1, h2, h3 {
+    font-family: 'airstrikeregular' !important;
+}
+h4, h5, h6 {
+    font-family: 'poppinsregular', Arial, Helvetica, sans-serif;
+}
+p {
+    font-family: 'poppinsregular', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+/* Font Size*/
+.fs-10 {
+    font-size: 5rem;
+}
+.neon-text {
+    text-
+}
