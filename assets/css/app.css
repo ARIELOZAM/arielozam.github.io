@@ -14,12 +14,7 @@
     display: block;
     height: 100vh;
 }
-body {
-    background-color: #212121;
-}
-* {
-    color: white;
-}
+
 h1, h2, h3 {
     font-family: 'airstrikeregular' !important;
 }
@@ -35,6 +30,22 @@ p {
 .fs-10 {
     font-size: 5rem;
 }
-.neon-text {
-    text-
+/* INTRO */
+#intro-header h4 {
+    font-size: 30px;
+    line-height: 6px;
+    letter-spacing: 27px;
 }
+
+/* DARKMODE SETTINGS */
+
+section.darkmode {
+    background-color: #000000 !important;
+    color: #fafafa !important;
+}
+
+header.darkmode {
+    background-color: #000000 !important;
+    color: #fafafa !important;
+}
+
