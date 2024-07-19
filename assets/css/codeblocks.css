@@ -16,3 +16,69 @@ h4, h5, h6 {
 p {
     font-weight: 400;
 }
+main {
+    display: block;
+    z-index: 2000 !important;
+    position: relative;
+    height: auto;
+    background-color: black !important;
+    width: 100%;
+    color: white;
+    margin-bottom: 130px !important;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.5);
+}
+.cb-heroheader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.cb-vh-100 {
+    height: 100vh !important;
+}
+
+/* NAVIGATION MENU */
+.cb-navbar{
+    width: 100%;
+    height: 60px;
+    max-height: 80px;
+    padding: 20px 20px;
+    background-color: #fafafa;
+    position: relative;
+    top: 0;
+    text-align: center;
+}
+.cb-nav {
+    justify-content:center;
+}
+.cb-nav .cb-nav-item {
+    display: inline-block;
+}
+.cb-nav-item .cb-nav-link {
+    text-decoration: none;
+    color: black !important;
+}
+
+.cb-float-navbar {
+    position: fixed !important;
+    z-index: 9999;
+    box-shadow: 10px 15px 20px rgba(0,0,0,0.5);
+}
+
+/* FOOTER */
+.cb-footer {
+    width: 100%;
+    height: auto;
+    background-color: #FAFAFA;
+    color: #000000 !important;
+}
+
+.cb-footer-fixed {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+}
+
+.cb-footer-h-50 {
+    padding: 50px;
+    
+}

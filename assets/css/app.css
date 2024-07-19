@@ -10,19 +10,6 @@
     font-family: "poppinsregular";
     src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   }
-body {
-    background-color: #212121 !important;
-    background: #212121 !important;
-    color: #FAFAFA !important;
-}
-
-header {
-    background-image: url(https://images.pexels.com/photos/19877487/pexels-photo-19877487/free-photo-of-madera-ligero-amanecer-paisaje.jpeg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 465px;
-}
 .header-data img {
     margin-top: -140px;
 }
