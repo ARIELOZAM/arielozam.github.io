@@ -5,33 +5,36 @@ const myJobs = [
     {
         "company": "Timbal",
         "web": "www.timbal.com.mx",
-        "description": "´This text is about the company´",
-        
-        
-
+        "description": "This text is about the company",
+        "buttonText": "Ver Más",
+        "buttonLink": "https://google.com"
     },
     {
         "company": "IT Nora",
         "web": "www.itnora.com",
-        "description": "´This text is about the company´",
+        "description": "This text is about the company",
+        "buttonText": "Ver Más",
+        "buttonLink": "https://google.com"
     },
     {
         "company": "Applab",
         "web": "www.applab.mx",
-        "description": "´This text is about the company´",
+        "description": "This text is about the company",
+        "buttonText": "Ver Más",
+        "buttonLink": "https://google.com"
     }
 ];
 
+//Blockcodes
+const componentBlock = {
+    "container": document.createElement("div"),
+    "row": document.createElement("div"),
+    "col": document.createElement("div")
+}
 function jobs() {
 
     const jobsBlock = document.querySelector("#jobs");
-    const divItem = document.createElement("div");// Card div
-    const cardBodyElement = document.createElement("div"); //card body
-    const cardTitleElement = document.createElement("h5"); //card title Div
-    const cardSubtitleElement = document.createElement("h6");
-    const cardTitle = document.createTextNode("Company"); //Card Title
-    const cardSubtitle = document.createTextNode("2010 - 2020"); //Card Subtitle
-    const headingFive = document.createElement("h5");
+    
 
     
 
@@ -54,7 +57,7 @@ function jobs() {
         const newJobs = myJobs[item];
         console.log(newJobs)
         jobsBlock.appendChild(cardItem.card);
-    cardItem.card.setAttribute("class", "card");
+    cardItem.card.setAttribute("class", "card m-3");
     cardItem.card.appendChild(cardItem.body);
     cardItem.body.setAttribute("class", "card-body");
     cardItem.body.appendChild(cardItem.title);
@@ -63,10 +66,12 @@ function jobs() {
     cardItem.body.appendChild(cardItem.subtitle);
     cardItem.subtitle.setAttribute("class", "card-subtitle text-body-secondary");
     cardItem.body.appendChild(cardItem.text);
-    cardItem.text.document.createTextNode(newJobs.description);
+    cardItem.text.appendChild(document.createTextNode(newJobs.description));
     cardItem.text.setAttribute("class", "card-text")
     cardItem.body.appendChild(cardItem.link);
     cardItem.link.setAttribute("class", "btn btn-primary");
+    cardItem.link.setAttribute("href", newJobs.buttonLink);
+    cardItem.link.appendChild(document.createTextNode(newJobs.buttonText))
     }
     };
 
