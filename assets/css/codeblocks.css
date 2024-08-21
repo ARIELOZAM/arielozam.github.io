@@ -21,7 +21,7 @@ main {
     z-index: 2000 !important;
     position: relative;
     height: auto;
-    background-color: black !important;
+    background-color: #212121 !important;
     width: 100%;
     color: white;
     margin-bottom: 130px !important;
@@ -36,27 +36,6 @@ main {
     height: 100vh !important;
 }
 
-/* NAVIGATION MENU */
-.cb-navbar{
-    width: 100%;
-    height: 60px;
-    max-height: 80px;
-    padding: 20px 20px;
-    background-color: #fafafa;
-    position: relative;
-    top: 0;
-    text-align: center;
-}
-.cb-nav {
-    justify-content:center;
-}
-.cb-nav .cb-nav-item {
-    display: inline-block;
-}
-.cb-nav-item .cb-nav-link {
-    text-decoration: none;
-    color: black !important;
-}
 
 .cb-float-navbar {
     position: fixed !important;

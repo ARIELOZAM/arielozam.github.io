@@ -30,9 +30,11 @@ p {
     font-size: 5rem;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #FAFAFA !important;
+}
 
-
-/* ViewS CSS */
-.hidden-view {
-    display: none;
+.card {
+    background-color: #424242 !important;
+    color: #FAFAFA !important;
 }
