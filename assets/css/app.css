@@ -68,6 +68,10 @@ p {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
+footer {
+  background-color: #323252;
+}
 /* Media Queries */
 @media screen and (max-width: 550px) {
   #header h1 {

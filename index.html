@@ -23,9 +23,9 @@
          <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse text-sm-center" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="/" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="#projects" class="nav-link">Projects</a>
@@ -36,14 +36,13 @@
             <li class="nav-item">
               <a href="#education" class="nav-link">Education</a>
             </li>
-          </ul>
-
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-  <label class="btn btn-outline-light" for="btncheck1">Light Mode</label>
+              <input type="checkbox" class="btn-check" id="lightMode" autocomplete="off">
+  <label class="btn btn-outline-light" for="lightMode">Light Mode</label>
             </li>
           </ul>
+
+        
         </div>
       </div>
     </nav>
@@ -112,7 +111,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mb-5">
                   <img
                     src="./assets/img/timbal-web.png"
@@ -122,22 +121,34 @@
                   <div class="card-body">
                     <h5 class="card-title"><strong>Timbal</strong></h5>
                     <h6 class="sub-title">
-                      <span class="badge text-bg-info">Website, WordPress</span>
+                      <span class="badge text-bg-light">Website</span>
                     </h6>
                     <p class="card-text">
                       Website based on wordpress cms for a marketing company,
                       they are dedicated to generate leads for companies.
                     </p>
+                    <span class="badge text-bg-light">WordPress </span>
+                  </div>
+                  <div class="card-footer">
+                
+
                     <a
-                      href="https://timbal.com.mx"
-                      target="_blank"
-                      class="btn btn-primary"
-                      >Go to Project</a
-                    >
+                    href="https://timbal.com.mx"
+                    target="_blank"
+                    class="btn btn-info"
+                    >Go to Project</a
+                  >
+
+                  <a
+                  href="https://timbal.com.mx"
+                  target="_blank"
+                  class="btn btn-purple"
+                  >See more</a
+                >
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mb-5">
                   <img
                     src="./assets/img/brunel-web.png"
@@ -162,7 +173,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mb-5">
                   <img
                     src="./assets/img/baroc-web.png"
@@ -187,7 +198,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mb-5">
                   <img
                     src="./assets/img/fanalytics-app.png"
@@ -213,7 +224,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card mb-5">
                   <img
                     src="./assets/img/catchzone-web.png"
@@ -258,6 +269,9 @@
                 </div>
               </div>
             </div>
+           
+          </div>
+          <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 my-3">
                 <!-- Slider main container -->
@@ -456,6 +470,27 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+    breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    },
+    950: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    }
+  }
   });
     </script>
   </body>
