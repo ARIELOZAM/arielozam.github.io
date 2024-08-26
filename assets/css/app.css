@@ -11,6 +11,9 @@
   src: url("../fonts/Poppins-Regular.woff2") format("woff2");
 }
 
+body {
+  background-color: grey !important;
+}
 .header-data img {
   margin-top: -140px;
 }
@@ -71,6 +74,13 @@ p {
 
 footer {
   background-color: #323252;
+}
+
+/* Projects Stytles */
+.project-title {
+  padding: 5rem 0 5rem 0;
+  margin-top: 4rem;
+  background-color: lightslategray;
 }
 /* Media Queries */
 @media screen and (max-width: 550px) {

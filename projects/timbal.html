@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ARIELOZAM Front End Developer with +6 years building Websites and Webapps with multiple frameworks and technologies base in Guadalajara, Mexico, Open to work remotely."
+    />
+    <meta name="author" content="ARIELOZAM" />
+    <meta
+      name="keywords"
+      content="Front, End, Front End Developer, Developer, Experienced, Web Designer, React, Vue, Javascript, Software Engineer"
+    />
+    <title>Timbal | ARIELOZAM | Front End Developer</title>
+    <link rel="stylesheet" href="./../assets/css/app.css" />
+    <!-- Main app Styles -->
+    <link rel="stylesheet" href="./../assets/css/codeblocks.css" />
+    <link rel="stylesheet" href="./../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./../assets/css/all.css" />
+    <link rel="stylesheet" href="./../assets/css/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg text-bg-dark fixed-top"
+      style="z-index: 9999"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><h3 class="text-white">ARIELOZAM</h3></a
+        >
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse text-sm-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#education" class="nav-link">Education</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="assets/files/arielozam-cv.md"
+                class="btn btn-outline-light"
+                download
+                >Download CV</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="project-title">
+      <div class="container-fluid mx-0">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1>Timbal</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="project-gallery" class="pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Project Gallery</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img
+                      src="  https://picsum.photos/1920"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="  https://picsum.photos/1920"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="  https://picsum.photos/1920"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="  https://picsum.photos/1920"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="project-info" class="p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>Project Info</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
+                laborum iusto nam omnis ipsam aliquid soluta, ipsa illum fuga
+                sit pariatur quam dolorem deserunt officia doloribus modi
+                exercitationem suscipit architecto?
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <ul class="">
+                <li>
+                  <a
+                    href="https://timbal.com.mx"
+                    class="list-group-item list-group-item-action"
+                    aria-current="true"
+                  >
+                    <i class="fa fa-envelope"></i> timbal.com.mx
+                  </a>
+                </li>
+                <li>WordPress</li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./../assets/js/swiper-bundle.min.js"></script>
+    <script>
+      // init Swiper:
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 5000,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          950: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

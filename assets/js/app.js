@@ -1,7 +1,5 @@
-function lightMode() {
+const myModal = document.getElementById('exampleModal')
 
-}
+myModal.addEventListener('shown.bs.modal', () => {
 
-lightMode.addEventListener('click', function() {
-  document.querySelector('.nav-menu').classList.toggle('active');
-});
+})
