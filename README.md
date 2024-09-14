@@ -1,13 +1,17 @@
-# Front End Developer & Graphic Designer
- - Name: Ariel Loza
+# Ariel Loza
+**Front End Developer & Web Designer**
+### Contact
  - Email: hello@arielozam.com
  - Website: [ARIELOZAM](https://arielozam.github.io)
+  
 ### Social Media:
-- LinkedIn
-- Facebook
-- Intagram
-- GitHub
+- [LinkedIn](https://www.linkedin.com/in/arielozam/)
+- [GitHub]()
 
+### Technical Skills
 
 ## About Me
-I love to create code projects or design
+
+## Projects
+
+## Experience

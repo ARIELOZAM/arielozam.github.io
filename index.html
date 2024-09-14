@@ -36,54 +36,8 @@
     </script>
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg text-bg-dark fixed-top"
-      style="z-index: 9999"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><h3 class="text-white">ARIELOZAM</h3></a
-        >
-        <button
-          class="navbar-toggler text-white"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse text-sm-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="/" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#experience" class="nav-link">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a href="#education" class="nav-link">Education</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="assets/files/arielozam-cv.md"
-                class="btn btn-outline-light"
-                download
-                >Download CV</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="nav"></div>
+
     <main class="mt-5">
       <section id="header" class="cb-heroheader mt-5">
         <div class="container mt-5">
@@ -154,7 +108,6 @@
         </div>
       </section>
 
-      <section></section>
       <div class="container mt-5">
         <section id="projects">
           <div class="container">
@@ -209,6 +162,7 @@
                     >
                       See more
                     </a>
+                    <!-- Button trigger modal -->
                   </div>
                 </div>
               </div>
@@ -320,7 +274,6 @@
               </div>
             </div>
           </div>
-          <hr />
         </section>
 
         <section id="experience">
@@ -331,7 +284,7 @@
                   <h1>Most Relevant Experience</h1>
                   <hr
                     style="border-color: #fafafa; width: 50%"
-                    class="border border-white border-2 opacity-100 rounded mx-auto"
+                    class="border-white border-2 opacity-100 rounded mx-auto"
                   />
                 </div>
               </div>
@@ -502,58 +455,11 @@
       </div>
     </main>
 
-    <footer class="cb-footer cb-footer-fixed cb-footer-h-50">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="text-center">
-              Sitio Desarrollado por ARIELOZAM &copy;
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/codeblocks.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
     <script>
       // init Swiper:
       const swiper = new Swiper(".swiper", {
