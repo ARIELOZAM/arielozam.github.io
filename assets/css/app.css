@@ -43,6 +43,14 @@ p {
 .navbar-expand-lg .navbar-nav .nav-link {
   color: #fafafa !important;
 }
+#social-icons .navbar .nav-item .nav-link {
+  transition: all ease-in-out 300ms;
+  color: #fafafa !important;
+}
+
+#social-icons .navbar .nav-item:hover .nav-link {
+  color: #fafafaad !important;
+}
 
 .card {
   background-color: #424242 !important;
@@ -55,8 +63,8 @@ p {
 }
 
 #header h1 {
-  font-size: 80px;
-  line-height: 10px;
+  font-size: 120px;
+  line-height: 80px;
 }
 
 #header hr {
@@ -74,6 +82,15 @@ p {
 
 footer {
   background-color: #323252;
+}
+
+/* Projects */
+#work h2 {
+  font-size: 65px;
+}
+
+#work p {
+  font-size: 20px;
 }
 
 /* Projects Stytles */

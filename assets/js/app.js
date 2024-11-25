@@ -5,7 +5,7 @@ navBar.style.zIndex = '9999';
 
 // Crear el contenedor interno (container-fluid)
 const containerFluid = document.createElement('div');
-containerFluid.className = 'container-fluid';
+containerFluid.className = 'container';
 
 // Crear el logo/marca
 const brandLink = document.createElement('a');
@@ -44,14 +44,13 @@ navList.className = 'navbar-nav ms-auto mb-2 mb-lg-0';
 
 // Crear los elementos de la lista
 const navItems = [
-  { href: '/', text: 'Home', class: 'nav-link' },
+  { href: '#header', text: 'Home', class: 'nav-link' },
   { href: '#projects', text: 'Projects', class: 'nav-link' },
-  { href: '#experience', text: 'Experience', class: 'nav-link' },
-  { href: '#education', text: 'Education', class: 'nav-link' },
+
   {
     href: './assets/files/arielozam-updated-resume-24.pdf',
     text: 'Download CV',
-    class: 'btn btn-outline-light',
+    class: 'btn btn-light',
     download: true
   }
 ];
