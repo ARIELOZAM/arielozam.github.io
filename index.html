@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/codeblocks.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -36,8 +37,10 @@
     </script>
   </head>
   <body>
+    <!-- Navigaion Menu -->
     <div id="nav"></div>
 
+    <!-- Main Content -->
     <main class="mt-5">
       <section id="header" class="cb-heroheader mt-5">
         <div class="container mt-5">
@@ -96,7 +99,6 @@
         </div>
       </section>
 
-      <div class="container mt-5">
         <section id="work">
           <div class="container">
             <div class="row gx-5 align-items-center justify-content-center">
@@ -108,159 +110,132 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="card mb-5">
-                
-                  <img
-                    src="./assets/img/timbal-web.png"
-                    class="card-img-top"
-                    alt="timbal"
-                  />
-                  <div class="card-img-overlay">
-                    <span class="badge text-bg-dark">Website</span>
-                    <span class="badge text-bg-dark">WordPress </span>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title"><strong>Timbal</strong></h5>
-                    <h6 class="sub-title">
-                    
-                    </h6>
-                    <p class="card-text">
-                      Website based on wordpress cms for a marketing company,
-                      they are dedicated to generate leads for companies.
-                    </p>
-                    
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="https://timbal.com.mx"
-                      target="_blank"
-                      class="btn btn-link"
-                      ><i class="fa-regular fa-paper-plane"></i>  </a
-                    >
+            <div id="recordContainer" class="row">
+              <!-- Cards will be inserted dynamically here -->
+            </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                    <a
-                      href="projects/timbal.html"
-                      type="button"
-                      class="btn btn-link"
-                    >
-                    <i class="fa-solid fa-circle-info"></i>
-                    </a>
-                    <!-- Button trigger modal -->
-                  </div>
+        <section id="experience">
+          <div class="container">
+            <div class="row gx-5 align-items-center justify-content-center">
+              <div class="col m-5">
+                <div class="text-left">
+                  <h2>Job Experience</h2>
+                  <p><em>Building new ways to get more done!</em></p>
+            
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-5">
-                  <img
-                    src="./assets/img/brunel-web.png"
-                    class="card-img-top"
-                    alt="brunel"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Brunel</h5>
-                    <h6 class="sub-title">
-                      <span class="badge text-bg-light">Website</span>
-                    </h6>
-                    <p class="card-text">
-                      e-Commerce shopify based for a company dedicated to sell
-                      luxury caps online on mexico.
-                    </p>
-                    <span class="badge text-bg-light">Shopify</span>
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="https://brunelmexico.com"
-                      target="_blank"
-                      class="btn btn-info"
-                      >Go to Project</a
-                    >
-                  </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="timeline" id="timelineContainer">
+                  <!-- Timeline items will be inserted dynamically -->
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-5">
-                  <img
-                    src="./assets/img/baroc-web.png"
-                    class="card-img-top"
-                    alt="Baroc"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Baroc</h5>
-                    <h6 class="sub-title">
-                      <span class="badge text-bg-info">Website, Shopify</span>
-                    </h6>
-                    <p class="card-text">
-                      e-Commerce shopify based for a company dedicated to sell
-                      premium sunglases online on mexico.
-                    </p>
-                    <a
-                      href="https://baroc.com.mx"
-                      target="_blank"
-                      class="btn btn-primary"
-                      >Go to Project</a
-                    >
-                  </div>
+            </div>
+          </div>
+<!-- Modal -->
+<div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="jobModalTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="jobModalBody">
+        <!-- Job details will be loaded here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </section>
+
+
+        <section id="skills">
+          <div class="container">
+            <div class="row gx-5 align-items-center justify-content-center">
+              <div class="col m-5">
+                <div class="text-left">
+                  <h2>What I can do</h2>
+                  <p><em>Building new ways to get more done!</em></p>
+            
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-5">
-                  <img
-                    src="./assets/img/fanalytics-app.png"
-                    class="card-img-top"
-                    alt="Fanalytics"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Fanalytics</h5>
-                    <h6 class="sub-title">
-                      <span class="badge text-bg-info">Webapp, Website</span>
-                    </h6>
-                    <p class="card-text">
-                      Company's website and webapp for trading Cards,
-                      Videogames, Comic books, VHS and more, the items are
-                      certified by CGC.
-                    </p>
-                    <a
-                      href="https://fanalytics.io"
-                      target="_blank"
-                      class="btn btn-primary"
-                      >Go to Project</a
-                    >
-                  </div>
-                </div>
+            </div>
+
+            <div class="row">
+              <div class="container">
+                <div class="col-12">
+                  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><div class="text-center">
+      
+      <i class="devicon-html5-plain"></i>
+          
+    </div></div>
+    <div class="swiper-slide">CSS</div>
+    <div class="swiper-slide">Javascript</div>
+    <div class="swiper-slide">Vue JS / Nuxt JS</div>
+    <div class="swiper-slide">React JS / Next JS</div>
+    <div class="swiper-slide">PHP / Laravel</div>
+    <div class="swiper-slide">Wordpress</div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar 
+  <div class="swiper-scrollbar"></div>
+  -->
+</div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card mb-5">
-                  <img
-                    src="./assets/img/catchzone-web.png"
-                    class="card-img-top"
-                    alt="brunel"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">CatchZone</h5>
-                    <h6 class="sub-title">
-                      <span class="badge text-bg-info">App</span>
-                    </h6>
-                    <p class="card-text">
-                      Social network for people that go fishing on USA where
-                      thwy can upload photos, made posts share their adventures
-                      while fishing and the can get certified and aslo they had
-                      a map to see where they can legally go fishing.
-                    </p>
-                    <a
-                      href="https://catchzone.com"
-                      target="_blank"
-                      class="btn btn-primary"
-                      >Go to Project</a
-                    >
-                  </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="text-center">
+                  <h2>Hire me!, or just follow me.</h2>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+       <!-- Modal Template -->
+  <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Content will be inserted here dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
+    </div>
+  </div>
+
     </main>
 
     <div id="footer"></div>
@@ -276,9 +251,9 @@
         direction: "horizontal",
         loop: true,
         spaceBetween: 10,
-        slidesPerView: 2,
+        slidesPerView: 5,
         autoplay: {
-          delay: 5000,
+          delay: 2000,
         },
 
         // If we need pagination
@@ -309,11 +284,11 @@
           },
           // when window width is >= 640px
           640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 40,
           },
           950: {
-            slidesPerView: 2,
+            slidesPerView: 5,
             spaceBetween: 20,
           },
         },
