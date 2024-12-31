@@ -1,22 +1,26 @@
 // Crear el contenedor principal del navbar
 const navBar = document.createElement('nav');
-navBar.className = 'navbar navbar-expand-lg text-bg-dark fixed-top';
+navBar.className = 'navbar navbar-expand-lg bg-primary text-bg-dark fixed-top';
 navBar.style.zIndex = '9999';
 
 // Crear el contenedor interno (container-fluid)
 const containerFluid = document.createElement('div');
-containerFluid.className = 'container';
+containerFluid.className = 'container d-flex justify-content-between align-items-center';
 
-// Crear el logo/marca
+// Crear el logo/marca (centrado)
+const brandContainer = document.createElement('div');
+brandContainer.className = 'd-flex justify-content-center flex-grow-1';
+
 const brandLink = document.createElement('a');
 brandLink.className = 'navbar-brand';
 brandLink.href = '#';
 
 const brandTitle = document.createElement('h3');
-brandTitle.className = 'text-white';
+brandTitle.className = 'text-white text-center';
 brandTitle.innerText = 'ARIELOZAM';
 
 brandLink.appendChild(brandTitle);
+brandContainer.appendChild(brandLink);
 
 // Botón de toggler (para pantallas pequeñas)
 const togglerButton = document.createElement('button');
@@ -38,24 +42,17 @@ const collapseDiv = document.createElement('div');
 collapseDiv.className = 'collapse navbar-collapse text-sm-center';
 collapseDiv.id = 'navbarSupportedContent';
 
-// Crear lista de navegación
+// Crear lista de navegación (en el lado izquierdo)
 const navList = document.createElement('ul');
-navList.className = 'navbar-nav ms-auto mb-2 mb-lg-0';
+navList.className = 'navbar-nav me-auto mb-2 mb-lg-0';
 
-// Crear los elementos de la lista
 const navItems = [
   { href: '#header', text: 'Home', class: 'nav-link' },
   { href: '#projects', text: 'Projects', class: 'nav-link' },
-
-  {
-    href: './assets/files/arielozam-updated-resume-24.pdf',
-    text: 'Download Resume',
-    class: 'btn btn-light',
-    download: true
-  }
+  { href: '#skills', text: 'Skills', class: 'nav-link' },
+  { href: '#experience', text: 'Experience', class: 'nav-link' },
 ];
 
-// Generar los <li> y los <a> dentro de la lista de navegación
 navItems.forEach(item => {
   const li = document.createElement('li');
   li.className = 'nav-item';
@@ -65,27 +62,36 @@ navItems.forEach(item => {
   a.innerText = item.text;
   a.className = item.class;
 
-  if (item.download) {
-    a.setAttribute('download', '');
-  }
-
   li.appendChild(a);
   navList.appendChild(li);
 });
 
-// Añadir lista al contenedor colapsable
+// Crear el botón de descarga (en el lado derecho)
+const resumeButtonContainer = document.createElement('div');
+resumeButtonContainer.className = 'ms-auto';
+
+const resumeButton = document.createElement('a');
+resumeButton.href = './assets/files/arielozam-updated-resume-24.pdf';
+resumeButton.innerText = 'Download Resume';
+resumeButton.className = 'btn btn-light';
+resumeButton.setAttribute('download', '');
+
+resumeButtonContainer.appendChild(resumeButton);
+
+// Añadir elementos al contenedor colapsable
 collapseDiv.appendChild(navList);
 
 // Añadir todos los elementos al contenedor principal
-containerFluid.appendChild(brandLink);
-containerFluid.appendChild(togglerButton);
-containerFluid.appendChild(collapseDiv);
+containerFluid.appendChild(navList);
+containerFluid.appendChild(brandContainer);
+containerFluid.appendChild(resumeButtonContainer);
 
 // Añadir container-fluid al navbar
 navBar.appendChild(containerFluid);
 
 // Insertar el navbar en el elemento con id #nav
 document.getElementById('nav').appendChild(navBar);
+
 
 // Crear el contenedor principal del footer
 const footer = document.createElement('footer');
@@ -131,20 +137,20 @@ const jsonData = [
   {
     id: 1,
     title: "Baroc",
-    subtitle: "Website",
+    type: "Website",
     category: "Shopify",
     description:
       "e-Commerce Shopify-based for a company dedicated to selling premium sunglasses online in Mexico.",
-    imgSrc: "./assets/img/baroc-web.png",
+    imgSrc: "./assets/img/barocshotsweb.png",
     link: "https://baroc.com.mx",
   },
   {
     id: 2,
     title: "Timbal",
-    subtitle: "Website",
+    type: "Website",
     category: "Nuxt JS",
     description: "Website based on wordpress cms for a marketing company, they are dedicated to generate leads for companies.",
-    imgSrc: "./assets/img/timbal-web.png",
+    imgSrc: "./assets/img/timbalshotsweb.png",
     link: "https://timbal.com.mx",
   },
 ];
@@ -168,8 +174,8 @@ function renderCards(data) {
         <div class="card-body">
           <h5 class="card-title">${record.title}</h5>
           <h6 class="sub-title">
-            <span class="badge text-bg-info">${record.subtitle}</span>
-            <div class="badge text-bg-info">${record.category}</div>
+            <span class="badge text-bg-primary">${record.type}</span>
+            <div class="badge text-bg-secondary">${record.category}</div>
           </h6>
           <p class="card-text">${record.description}</p>
         </div>
@@ -185,6 +191,9 @@ function renderCards(data) {
             type="button"
             class="btn btn-link showModalBtn"
             data-id="${record.id}"
+data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="This top tooltip is themed via CSS variables."
           >
             <i class="fa-solid fa-circle-info"></i>
           </button>
@@ -193,6 +202,9 @@ function renderCards(data) {
     `;
     recordContainer.appendChild(card);
   });
+
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
   // Attach event listeners to "info" buttons
   document.querySelectorAll('.showModalBtn').forEach(button => {
@@ -211,9 +223,9 @@ function showModal(record) {
 
   modalTitle.textContent = record.title;
   modalBody.innerHTML = `
-    <p><strong>Category:</strong> ${record.category}</p>
+    <p><strong>Technologies:</strong> ${record.category}</p>
     <p>${record.description}</p>
-    <a href="${record.link}" target="_blank" class="btn btn-primary">Visit</a>
+    <a href="${record.link}" target="_blank" class="btn btn-secondary">Live Preview</a>
   `;
 
   const modalElement = new bootstrap.Modal(document.getElementById('dynamicModal'));
