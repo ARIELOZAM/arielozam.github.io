@@ -42,17 +42,3 @@ main {
   z-index: 9999;
   box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.5);
 }
-
-/* FOOTER */
-.cb-footer {
-  height: auto;
-  background-color: #323232;
-  color: #fafafa !important;
-  padding: 53px;
-}
-
-.btn-purple {
-  background-color: purple !important;
-  border-color: maroon !important;
-  color: white !important;
-}

@@ -59,7 +59,7 @@ p {
   height: 100px;
   margin: 5rem;
 }
-.swiper-slide > i {
+.swiper-slide > div  > i {
   font-size: 3rem !important;
   margin: 3rem;
 }
@@ -86,9 +86,7 @@ form {
   border-radius: 20px !important;
 }
 
-footer {
-  background-color: #323252;
-}
+
 
 /* Projects */
 #work h2, #experience h2, #skills h2, #contact h2 {
