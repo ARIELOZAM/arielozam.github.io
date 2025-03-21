@@ -1,0 +1,27 @@
+#header {
+    background: rgb(166,0,255);
+background: linear-gradient(90deg, rgba(166,0,255,1) 0%, rgba(82,0,144,1) 48%, rgba(68,0,163,1) 100%);
+}
+#about {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+}   
+
+/* Footer */
+
+footer {
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
