@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "airstrikeregular";
+    src: url("../fonts/airstrike-webfont.woff2") format("woff2"),
+      url("../fonts/airstrike-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "poppinsregular";
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+  }
 .card-hover:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -30,7 +42,7 @@
 
 body {
     background-color: var(--light-bg);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppinsregular', sans-serif;
 }
 
 .form-container {
@@ -738,6 +750,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
+    font-family: 'airstrikeregular', sans-serif; 
+    font-size: 50px;
 }
 
 .nav-logo:after {
@@ -943,7 +957,13 @@ height: 150%;
 background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
 animation: float 20s infinite linear;
 }
-
+footer {
+    font-family: poppinsregular, sans-serif;
+}
+.footer-logo {
+    font-family: 'airstrikeregular', sans-serif;
+    font-size: 30px;
+}
 @keyframes float {
 0% { transform: translate(-25%, -25%); }
 50% { transform: translate(-75%, -75%); }
