@@ -1,350 +1,904 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="ARIELOZAM Front End Developer with +6 years building Websites and Webapps with multiple frameworks and technologies base in Guadalajara, Mexico, Open to work remotely." />
-  <meta name="author" content="ARIELOZAM" />
-  <meta name="keywords"
-    content="Front, End, Front End Developer, Developer, Experienced, Web Designer, React, Vue, Javascript, Software Engineer" />
-  <title>ARIELOZAM | Front End Developer and Graphic Designer</title>
-  <link rel="stylesheet" href="assets/css/app.css" />
-  <!-- Main app Styles -->
-  <link rel="stylesheet" href="assets/css/codeblocks.css" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/all.css" />
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-18GQVJ9ZHL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="ARIELOZAM Front End Developer with +6 years building Websites and Webapps with multiple frameworks and technologies base in Guadalajara, Mexico, Open to work remotely." />
+    <meta name="author" content="ARIELOZAM" />
+    <meta name="keywords"
+        content="Front, End, Front End Developer, Developer, Experienced, Web Designer, React, Vue, Javascript, Software Engineer" />
+    <title>ARIELOZAM | Front End Developer and Graphic Designer</title>
+    <link rel="stylesheet" href="assets/css/web.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-default.css" />
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    gtag("config", "G-18GQVJ9ZHL");
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18GQVJ9ZHL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-18GQVJ9ZHL");
+    </script>
 </head>
 
 <body>
-  <!-- Navigaion Menu -->
-  <div id="nav"></div>
+    <nav class="navbar tech-nav navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand nav-logo" href="#">ARIELOZAM</a>
+            
+            <button class="hamburger-tech d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTech">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarTech">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-terminal"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-microchip"></i>
+                            Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-server"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-code-branch"></i>
+                            Solutions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-rocket"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                
+                <button class="cta-tech ms-lg-3">
+                    Get Started
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Main Content -->
-  <main class="mt-5">
-    <section id="header" class="cb-heroheader mt-5">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="position-relative cb-vh-100 w-100">
-              <div class="position-absolute top-50 start-50 translate-middle">
-                <div class="text-center">
-                  <h1>Front End Developer</h1>
+    <!-- Main Content -->
+    <main>
+        <section class="hero-header">
+            <div class="hero-bg-pattern"></div>
+            
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Transform Your Digital Presence With Modern Solutions
+                            </h1>
+                            <p class="hero-subtitle">
+                                We create immersive web experiences that drive results and elevate brands to new heights through cutting-edge technology.
+                            </p>
+                            <a href="#" class="cta-button">
+                                <i class="fas fa-rocket"></i>
+                                Launch Project
+                            </a>
+                            
+                            <div class="hero-social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="https://placehold.co/600x800" alt="Hero Image">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div id="social-icons" class="d-flex justify-content-center mt-5 text-white">
-                  <ul class="navbar nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="mailto:hello@arielozam.com" target="_blank" data-toggle="tooltip"
-                        data-placement="top" title="Email Me!"><i class="fa-regular fa-envelope fa-2xl"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://wa.me/+5213311153802" target="_blank" data-toggle="tooltip"
-                        data-placement="top" title="Let's Chat!"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://www.linkedin.com/in/arielozam/" target="_blank"
-                        data-toggle="tooltip" data-placement="top" title="Let's Connect!"><i
-                          class="fa-brands fa-linkedin fa-2xl"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://github.io/ARIELOZAM" data-toggle="tooltip" data-placement="top"
-                        title="Watch my code!"><i class="fa-brands fa-github fa-2xl"></i></a>
-                    </li>
-                  </ul>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-container">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="profile-image">
+                                <!-- Replace with your image -->
+                                <img src="https://placehold.co/600x800" alt="Profile Photo">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <span class="section-tag">About Me</span>
+                                <h1 class="about-heading">
+                                    Hi! I'm <span class="highlight-text">John Doe</span>,<br>
+                                    Digital Creator & Full-Stack Developer
+                                </h1>
+                                <p class="about-text">
+                                    With over 8 years of experience in digital solutions, I specialize in creating impactful web experiences and robust applications. My passion lies in transforming complex problems into elegant, user-friendly solutions.
+                                </p>
+                                <p class="about-text">
+                                    I bridge the gap between design and technology, delivering products that are both visually stunning and technically impeccable. My work philosophy centers on continuous innovation and measurable results.
+                                </p>
+                                
+                                <div class="skills-container">
+                                    <span class="skill-pill">Web Development</span>
+                                    <span class="skill-pill">UI/UX Design</span>
+                                    <span class="skill-pill">React & Next.js</span>
+                                    <span class="skill-pill">Node.js</span>
+                                    <span class="skill-pill">Cloud Architecture</span>
+                                    <span class="skill-pill">DevOps</span>
+                                </div>
+        
+                                <button class="cta-button">
+                                    <i class="fas fa-download"></i>
+                                    Download CV
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </section>
+
+       
+
+         <section class="services-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Servicios</h2>
+                </div>
+        
+                <div class="row g-4">
+                    <!-- Web Development -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-text">
+                                Desarrollo de aplicaciones web personalizadas y sitios corporativos con tecnologías modernas y escalables.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Graphic Design -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="service-title">Graphic Design</h3>
+                            <p class="service-text">
+                                Diseño gráfico profesional: branding, identidad visual y material promocional impactante y memorable.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- SEO -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <h3 class="service-title">SEO Optimization</h3>
+                            <p class="service-text">
+                                Estrategias de posicionamiento orgánico para aumentar tu visibilidad en motores de búsqueda.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Kommo CRM -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="service-title">Kommo CRM</h3>
+                            <p class="service-text">
+                                Implementación y optimización de CRM para gestión de clientes y automatización de ventas.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- e-Commerce -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3 class="service-title">e-Commerce</h3>
+                            <p class="service-text">
+                                Plataformas de comercio electrónico completas con integración de pagos y gestión de inventario.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Marketing Strategies -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-network"></i>
+                            </div>
+                            <h3 class="service-title">Marketing Strategies</h3>
+                            <p class="service-text">
+                                Planes de marketing digital integrales para maximizar tu ROI y crecimiento de negocio.
+                            </p>
+                            <a href="#" class="service-link">
+                                Más detalles
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section py-6 position-relative overflow-hidden">
+    <div class="container position-relative z-2">
+        <div class="row mb-7" data-aos="fade-up">
+            <div class="col-xl-8 col-lg-10 mx-auto text-center">
+                <div class="section-pretitle">Trabajos Recientes</div>
+                <h2 class="display-4 fw-bold mb-3 gradient-text">Explora Mi Portfolio</h2>
+                <p class="lead text-muted mb-0">Descubre proyectos innovadores donde diseño y tecnología se unen para crear soluciones excepcionales</p>
+            </div>
         </div>
-      </div>
-      </div>
-    </section>
 
-    <section id="work">
-      <div class="container">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col m-5">
-            <div class="text-left">
-              <h2>Projects</h2>
-              <p><em>Building new ways to get more done!</em></p>
-
-            </div>
-          </div>
-        </div>
-        <div id="recordContainer" class="row">
-          <!-- Cards will be inserted dynamically here -->
-        </div>
-      </div>
-      </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col m-5">
-            <div class="text-left">
-              <h2>Job Experience</h2>
-              <p><em>Building new ways to get more done!</em></p>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <div class="timeline" id="timelineContainer">
-              <!-- Timeline items will be inserted dynamically -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modal -->
-      <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="jobModalTitle"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="jobModalBody">
-              <!-- Job details will be loaded here -->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="skills">
-      <div class="container">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col m-5">
-            <div class="text-left">
-              <h2>Skills</h2>
-              <p><em>Never stop learning.</em></p>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div class="col-12">
-              <!-- Slider main container -->
-              <div class="swiper">
-                <!-- Additional required wrapper -->
+        <div class="position-relative">
+            <!-- Slider main container -->
+            <div class="swiper portfolioSwiper">
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                   <div class="text-center">
-                    <i class="devicon-html5-plain"></i>
-                    <span>HTML</span>
-                   </div>
-                  </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="project-card hover-transform">
+                            <div class="card-overlay"></div>
+                            <img src="https://placehold.co/600x400" class="project-img" alt="Proyecto 1">
+                            <div class="project-content">
+                                <div class="project-badge">Web Development</div>
+                                <h3 class="project-title">Plataforma E-Learning</h3>
+                                <p class="project-description">Desarrollo de plataforma educativa con React y Node.js</p>
+                                <div class="project-tech">
+                                    <span class="tech-pill">React</span>
+                                    <span class="tech-pill">MongoDB</span>
+                                    <span class="tech-pill">AWS</span>
+                                </div>
+                                <a href="#" class="project-link">
+                                    Ver Caso de Estudio
+                                    <i class="fas fa-arrow-up-right-from-square ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                  <div class="swiper-slide">
-                   <div class="text-center">
-                    <i class="devicon-css3-plain"></i> 
-                    <span>CSS</span>
-                   </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-center">
-                      <i class="devicon-javascript-plain"></i>
-                      <span>Javascript</span>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="project-card hover-transform">
+                            <div class="card-overlay"></div>
+                            <img src="https://placehold.co/600x400" class="project-img" alt="Proyecto 2">
+                            <div class="project-content">
+                                <div class="project-badge">Mobile App</div>
+                                <h3 class="project-title">Aplicación de Fitness</h3>
+                                <p class="project-description">Solución cross-platform para seguimiento de entrenamientos</p>
+                                <div class="project-tech">
+                                    <span class="tech-pill">Flutter</span>
+                                    <span class="tech-pill">Firebase</span>
+                                    <span class="tech-pill">AI</span>
+                                </div>
+                                <a href="#" class="project-link">
+                                    Ver Detalles
+                                    <i class="fas fa-arrow-up-right-from-square ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                   <div class="text-center">
-                    <i class="devicon-vuejs-plain"></i>
-                    <span>Vue JS</span>
-                   </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-center">
-                    <i class="devicon-nuxtjs-plain"></i>
-                    <span>Nuxt JS</span>
-                  </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-center">
-                      <i class="devicon-react-original"></i>
-                      <span>Reac JS</span>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="project-card hover-transform">
+                            <div class="card-overlay"></div>
+                            <img src="https://placehold.co/600x400" class="project-img" alt="Proyecto 3">
+                            <div class="project-content">
+                                <div class="project-badge">e-Commerce</div>
+                                <h3 class="project-title">Tienda Luxury</h3>
+                                <p class="project-description">Plataforma premium de comercio electrónico</p>
+                                <div class="project-tech">
+                                    <span class="tech-pill">Next.js</span>
+                                    <span class="tech-pill">Shopify</span>
+                                    <span class="tech-pill">WebGL</span>
+                                </div>
+                                <a href="#" class="project-link">
+                                    Ver Demo
+                                    <i class="fas fa-arrow-up-right-from-square ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-center">
-                      <i class="devicon-nextjs-original-wordmark"></i>
-                      <span>Next JS</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="text-center">
-                      <i class="devicon-php-plain"></i>
-                      <span>PHP</span>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <i class="devicon-laravel-original"></i>
-                  </div>
-                  <div class="swiper-slide">
-                    <i class="devicon-wordpress-plain"></i>
-                  </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar 
-  <div class="swiper-scrollbar"></div>
-  -->
-              </div>
+                <!-- Custom Navigation -->
+                <div class="swiper-button-next portfolio-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="swiper-button-prev portfolio-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                
+                <!-- Custom Pagination -->
+                <div class="swiper-pagination portfolio-pagination"></div>
             </div>
-          </div>
         </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="text-center">
-              <h2>Are you ready for Hire?.</h2>
-            </div>
-          </div>
-        </div>
-
-       <div class="row gx-0 align-items-center justify-content-center">
-        <div class="col-md-6">
-          <div class="container mt-5">
-                        <form id="contactForm" class="bg-dark shadow p-4">
-                <div class="mb-3">
-                    <label for="name" class="form-label fs-4">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Jhon Doe">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="j.doe@web.com" required>
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="331153802">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell me more about your project..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-            <div id="responseMessage" class="mt-3"></div>
-        </div>
-        </div>
-        <div class="col-md-6">
-          <img class="img-fluid" src="assets/img/header-img.png" alt="">
-        </div>
-       </div>
-      </div>
-    </section>
-
-    <!-- Modal Template -->
-    <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalTitle"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="modalBody">
-            <!-- Content will be inserted here dynamically -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
     </div>
 
-  </main>
+    <!-- Background Elements -->
+    <div class="portfolio-gradient"></div>
+</section>
 
-  <div id="footer" class="bg-warnign"></div>
+<!-- Kommo CRM Section -->
+<section id="kommo" class="py-6 position-relative overflow-hidden">
+    <div class="container position-relative z-2">
+        <!-- Section Header -->
+        <div class="row mb-7" data-aos="fade-up">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="badge bg-kommo-soft text-kommo mb-3 px-4 py-2 rounded-pill">Solución CRM Completa</div>
+                <h2 class="display-5 fw-bold mb-3">Potencia tu Negocio con Kommo</h2>
+                <p class="lead text-muted mb-0">Sistemas CRM personalizados para cada etapa de crecimiento</p>
+            </div>
+        </div>
 
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- Pricing Cards -->
+        <div class="row g-4 justify-content-center">
+            <!-- Plan Basic -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card pricing-card hover-lift">
+                    <div class="card-body p-5">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4">
+                                <h3 class="h4 fw-bold">Básico</h3>
+                                <p class="text-muted mb-0">Startup Essentials</p>
+                                <div class="my-4">
+                                    <span class="display-5 fw-bold">$15</span>
+                                    <span class="text-muted">/mes</span>
+                                    <small class="d-block text-muted mt-1">por usuario</small>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="feature-category text-kommo mb-3">Ventas & CRM</li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Canales de ventas
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Embudo de ventas
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Gestión de contactos
+                                </li>
 
-  <script>
-    // init Swiper:
-    const swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 5,
-      autoplay: {
-        delay: 2000,
-      },
+                                <li class="feature-category text-kommo my-3">Comunicación</li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Email integrado
+                                </li>
+                                <li class="d-flex align-items-center mb-3 text-muted">
+                                    <i class="bi bi-x-circle-fill text-danger me-2"></i>
+                                    Chat en vivo
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-auto pt-4">
+                                <button class="btn btn-kommo-soft w-100 py-3">
+                                    Comenzar prueba
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-      },
+            <!-- Plan CRM+ (Popular) -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card pricing-card popular-card hover-lift">
+                    <span class="popular-badge bg-kommo">Más Popular</span>
+                    <div class="card-body p-5">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4">
+                                <h3 class="h4 fw-bold">CRM+</h3>
+                                <p class="text-muted mb-0">Equipos de Ventas</p>
+                                <div class="my-4">
+                                    <span class="display-5 fw-bold">$30</span>
+                                    <span class="text-muted">/mes</span>
+                                    <small class="d-block text-muted mt-1">por usuario</small>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="feature-category text-kommo mb-3">Todo en Básico +</li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-2"></i>
+                                    Múltiples embudos
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-2"></i>
+                                    Análisis avanzado
+                                </li>
 
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+                                <li class="feature-category text-kommo my-3">Comunicación</li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Chat en vivo
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    Mensajería SMS
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-auto pt-4">
+                                <button class="btn btn-kommo w-100 py-3">
+                                    Prueba Premium
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      // And if we need scrollbar
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-        // when window width is >= 640px
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        950: {
-          slidesPerView: 8,
-          spaceBetween: 20,
-        },
-      },
+            <!-- Plan Commerce -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card pricing-card hover-lift">
+                    <div class="card-body p-5">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4">
+                                <h3 class="h4 fw-bold">Commerce</h3>
+                                <p class="text-muted mb-0">E-commerce Integrado</p>
+                                <div class="my-4">
+                                    <span class="display-5 fw-bold">$50</span>
+                                    <span class="text-muted">/mes</span>
+                                    <small class="d-block text-muted mt-1">por usuario</small>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="feature-category text-kommo mb-3">Todo en CRM+ +</li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-cart-check-fill text-kommo me-2"></i>
+                                    Tienda online
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-credit-card-fill text-kommo me-2"></i>
+                                    Pasarela de pagos
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-box-seam-fill text-kommo me-2"></i>
+                                    Gestión de inventario
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-auto pt-4">
+                                <button class="btn btn-kommo-soft w-100 py-3">
+                                    Comenzar prueba
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan Enterprise -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="card pricing-card hover-lift">
+                    <div class="card-body p-5">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4">
+                                <h3 class="h4 fw-bold">Enterprise</h3>
+                                <p class="text-muted mb-0">Solución Personalizada</p>
+                                <div class="my-4">
+                                    <span class="display-5 fw-bold">Custom</span>
+                                    <small class="d-block text-muted mt-2">Plan a medida</small>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-gear-fill text-kommo me-2"></i>
+                                    Integraciones API
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-headset text-kommo me-2"></i>
+                                    Soporte 24/7
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-shield-lock-fill text-kommo me-2"></i>
+                                    Seguridad avanzada
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-auto pt-4">
+                                <button class="btn btn-outline-kommo w-100 py-3">
+                                    Contactar Ventas
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-1">
+        <div class="kommo-gradient-blob"></div>
+    </div>
+</section>
+
+         <!-- Contact Section -->
+         <section id="contact" class="py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row py-5" data-aos="fade-up">
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <h2 class="section-title">Contact Me</h2>
+                        <p class="section-subtitle">I'm here to help you with any questions or concerns you may have.</p>
+                    </div>
+                </div>
+      
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="form-container">
+                            <div class="row g-0">
+                                <!-- Left panel with contact information -->
+                                <div class="col-md-5">
+                                    <div class="left-panel p-5">
+                                        <div class="left-pattern"></div>
+                                        <div class="contact-info animate-in">
+                                            <h2 class="fw-bold mb-4">Get in Touch</h2>
+                                            <p class="mb-5">We'd love to hear from you. Fill out the form and our team will get back to you as soon as possible.</p>
+                                            
+                                            <div class="contact-icon-box">
+                                                <i class="bi bi-geo-alt"></i>
+                                                <div>
+                                                    <h6 class="mb-0 fw-bold">Our Location</h6>
+                                                    <p class="mb-0">123 Business Ave, Suite 500<br>San Francisco, CA 94107</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="contact-icon-box">
+                                                <i class="bi bi-telephone"></i>
+                                                <div>
+                                                    <h6 class="mb-0 fw-bold">Phone Number</h6>
+                                                    <p class="mb-0">+1 (555) 123-4567</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="contact-icon-box">
+                                                <i class="bi bi-envelope"></i>
+                                                <div>
+                                                    <h6 class="mb-0 fw-bold">Email Address</h6>
+                                                    <p class="mb-0">hello@yourcompany.com</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mt-5">
+                                                <h6 class="fw-bold mb-3">Follow Us</h6>
+                                                <div class="social-icons">
+                                                    <a href="#"><i class="bi bi-facebook"></i></a>
+                                                    <a href="#"><i class="bi bi-twitter"></i></a>
+                                                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Right panel with contact form -->
+                                <div class="col-md-7">
+                                    <div class="p-5">
+                                        <div class="animate-in" style="animation-delay: 0.2s;">
+                                            <h3 class="fw-bold mb-4">Send us a Message</h3>
+                                            <p class="text-muted mb-4">Please fill out the form below and we'll respond within 24 hours.</p>
+                                            
+                                            <form id="contactForm">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="floating-input">
+                                                            <input type="text" class="form-control" id="firstName" placeholder=" " required>
+                                                            <label for="firstName">First Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="floating-input">
+                                                            <input type="text" class="form-control" id="lastName" placeholder=" " required>
+                                                            <label for="lastName">Last Name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="floating-input">
+                                                    <input type="email" class="form-control" id="email" placeholder=" " required>
+                                                    <label for="email">Email Address</label>
+                                                </div>
+                                                
+                                                <div class="floating-input">
+                                                    <input type="tel" class="form-control" id="phone" placeholder=" ">
+                                                    <label for="phone">Phone Number (optional)</label>
+                                                </div>
+                                                
+                                                <div class="floating-input">
+                                                    <select class="form-control" id="subject" required>
+                                                        <option value="" selected disabled>Select a subject</option>
+                                                        <option value="general">General Inquiry</option>
+                                                        <option value="support">Technical Support</option>
+                                                        <option value="billing">Billing Question</option>
+                                                        <option value="partnership">Partnership Opportunity</option>
+                                                    </select>
+                                                    <label for="subject">Subject</label>
+                                                </div>
+                                                
+                                                <div class="floating-input">
+                                                    <textarea class="form-control" id="message" rows="4" placeholder=" " required></textarea>
+                                                    <label for="message">Your Message</label>
+                                                </div>
+                                                
+                                                <div class="form-check mb-4">
+                                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                                    <label class="form-check-label text-muted" for="newsletter">
+                                                        Subscribe to our newsletter for updates and promotions
+                                                    </label>
+                                                </div>
+                                                
+                                                <div id="formContent">
+                                                    <button type="submit" class="btn btn-primary px-4 py-3">
+                                                        <i class="bi bi-send me-2"></i>Send Message
+                                                    </button>
+                                                </div>
+                                                
+                                                <div id="successMessage" style="display: none;" class="text-center py-4">
+                                                    <div class="success-checkmark">
+                                                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                                        </svg>
+                                                    </div>
+                                                    <h4 class="mt-4 text-success">Message Sent Successfully!</h4>
+                                                    <p class="text-muted">Thank you for contacting us. We'll get back to you shortly.</p>
+                                                    <button type="button" id="resetForm" class="btn btn-outline-primary mt-3">Send Another Message</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+       <footer class="footer bg-dark text-white pt-5">
+         <div class="container">
+             <div class="row g-4">
+                 <!-- About Column -->
+                 <div class="col-lg-4 col-md-6">
+                     <h4 class="mb-4">ARIELOZAM</h4>
+                     <p class="text-muted">Transformando ideas en soluciones digitales innovadoras.</p>
+                     <div class="social-icons mt-4">
+                         <a href="#" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+                         <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                         <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                         <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                     </div>
+                 </div>
+     
+                 <!-- Services Column -->
+                 <div class="col-lg-2 col-md-6">
+                     <h5 class="mb-4">Servicios</h5>
+                     <ul class="list-unstyled">
+                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text-primary">Desarrollo Web</a></li>
+                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text-primary">Diseño UI/UX</a></li>
+                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text-primary">e-Commerce</a></li>
+                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none hover-text-primary">Marketing Digital</a></li>
+                     </ul>
+                 </div>
+     
+                 <!-- Contact Column -->
+                 <div class="col-lg-3 col-md-6">
+                     <h5 class="mb-4">Contacto</h5>
+                     <ul class="list-unstyled text-muted">
+                         <li class="mb-3">
+                             <i class="fas fa-envelope me-2"></i>
+                             contacto@arieozam.com
+                         </li>
+                         <li class="mb-3">
+                             <i class="fas fa-phone me-2"></i>
+                             +1 234 567 890
+                         </li>
+                         <li>
+                             <i class="fas fa-map-marker-alt me-2"></i>
+                             Buenos Aires, Argentina
+                         </li>
+                     </ul>
+                 </div>
+     
+                 <!-- Newsletter Column -->
+                 <div class="col-lg-3 col-md-6">
+                     <h5 class="mb-4">Newsletter</h5>
+                     <form>
+                         <div class="input-group mb-3">
+                             <input type="email" class="form-control bg-black border-dark" placeholder="Tu email" aria-label="Email">
+                             <button class="btn btn-primary" type="button">
+                                 <i class="fas fa-paper-plane"></i>
+                             </button>
+                         </div>
+                         <p class="text-muted small">Suscríbete para recibir actualizaciones.</p>
+                     </form>
+                 </div>
+             </div>
+     
+             <!-- Copyright -->
+             <div class="border-top border-dark mt-5 pt-4">
+                 <div class="row">
+                     <div class="col-md-12 text-center">
+                         <p class="text-muted small mb-0">
+                             &copy; 2025 ARIELOZAM. Todos los derechos reservados. 
+                             <a href="#" class="text-muted text-decoration-none ms-3">Privacidad</a>
+                             <a href="#" class="text-muted text-decoration-none ms-3">Términos</a>
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/web.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+      // Initialize Swiper
+const portfolioSwiper = new Swiper('.portfolioSwiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
+    navigation: true,
+    pagination: {
+        el: '.portfolio-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            spaceBetween: 40
+        }
+    }
+});
+
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formContent = document.getElementById('formContent');
+            const successMessage = document.getElementById('successMessage');
+            const resetFormButton = document.getElementById('resetForm');
+            const successCheckmark = document.querySelector('.success-checkmark');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission (replace with actual form submission)
+                formContent.style.display = 'none';
+                successMessage.style.display = 'block';
+                successCheckmark.style.display = 'block';
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            resetFormButton.addEventListener('click', function() {
+                contactForm.reset();
+                successMessage.style.display = 'none';
+                formContent.style.display = 'block';
+            });
+            
+            // Floating label animation for select element
+            const selectElement = document.querySelector('select.form-control');
+            selectElement.addEventListener('change', function() {
+                if (this.value !== '') {
+                    this.setAttribute('data-selected', 'true');
+                } else {
+                    this.removeAttribute('data-selected');
+                }
+            });
+        });
+
+          // Animación del hamburguesa
+    const hamburger = document.querySelector('.hamburger-tech');
+    const navbar = document.querySelector('.tech-nav');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
     });
-  </script>
+
+    // Efecto scroll
+    window.addEventListener('scroll', function() {
+        if(window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    </script>
 </body>
 
 </html>
