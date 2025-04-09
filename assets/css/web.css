@@ -232,6 +232,8 @@ body {
         stroke-dashoffset: 0;
     }
 }
+
+/* Portfolio Section */
 .portfolio-section {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     padding: 120px 0;
@@ -380,6 +382,8 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* Services Section */
 .services-section {
     padding: 100px 0;
     background: #ffffff;
@@ -475,6 +479,7 @@ body {
     transform: translateX(-50%);
     border-radius: 2px;
 }
+/* About Section */
 .about-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -597,6 +602,7 @@ body {
         font-size: 2rem;
     }
 }
+/** Hero Section */
 .hero-header {
     min-height: 100vh;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -978,7 +984,7 @@ margin-bottom: 2rem;
 
 
 /* Seccion de Kommo Home Features */
-.kommo-features {
+.kommo-features, .portfolio-section {
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
 }
@@ -1136,5 +1142,144 @@ margin-bottom: 2rem;
     
     .channel-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+.notion-style-modal {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+}
+
+.notion-header {
+    position: relative;
+    padding: 0;
+    border-bottom: none;
+    width: 100% !important;
+}
+
+.header-image-container {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, transparent 60%);
+}
+
+.modal-title {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.notion-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.notion-close:hover {
+    background: rgba(255,255,255,0.2);
+    transform: rotate(90deg);
+}
+
+.notion-body {
+    padding: 2rem;
+    background: #fff;
+}
+
+.block-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.features-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+}
+
+.tech-tag {
+    display: inline-block;
+    background: #6366f1;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 0.9rem;
+}
+
+.sidebar-block {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.case-study {
+    text-align: center;
+    padding: 1.5rem;
+    background: #6366f1;
+    color: white;
+    border-radius: 8px;
+}
+
+.stat {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-label {
+    opacity: 0.9;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .modal-title {
+        font-size: 1.75rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
+    
+    .header-image-container {
+        height: 200px;
     }
 }
