@@ -90,3 +90,45 @@ function openServiceModal(service) {
 
 // Inicializar al cargar la página
 document.addEventListener('DOMContentLoaded', renderServices);
+
+// Validación de formulario
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name === "" || email === "" || message === "") {
+        alert("Por favor, completa todos los campos.");
+        return false;
+    }
+
+    // Aquí puedes agregar más validaciones si es necesario
+    return true;
+}
+
+// Airtable API Connection
+function sendToAirtable() {
+    var Airtable = require('airtable');
+var base = new Airtable({apiKey: 'patjIbVzegCTHLU9B.2f9e05530c0953c3828ffd16fb1863ac8f757077c97d9227731e942a933782f4'}).base('appgkauBNiPlm5vV4');
+
+base('Formulario ARIELOZAM').create([
+    {
+        "fields": {
+        "Nombre": document.getElementById('firstName').value + " " + document.getElementById('lastName').value,
+        "Telefono": document.getElementById('phone').value,
+        "Correo": document.getElementById('email').value,
+        "Asunto": document.getElementById('subject').value,
+        "Mensaje": document.getElementById('message').value,
+        "Newsletter": document.getElementById('newsletter').checked == true,
+        }
+    }
+], function(err, records) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  records.forEach(function (record) {
+    console.log(record.getId());
+  });
+});
+}
