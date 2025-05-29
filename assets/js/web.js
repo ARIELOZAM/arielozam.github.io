@@ -2,7 +2,7 @@
 const servicesData = [
     {
         id: 1,
-        title: "Desarrollo Web Avanzado",
+        title: "Desarrollo Web",
         icon: "fa-code",
         description: "Creación de aplicaciones web modernas con las últimas tecnologías",
         image: "https://source.unsplash.com/random/800x600?webdevelopment",
@@ -35,6 +35,23 @@ const servicesData = [
             client: "StartupX",
             result: "+150% leads"
         }
+    },{
+        id: 3,
+        title: "Desarrollo e-Commerce",
+        icon: "fa-cart-line",
+        description: "Desarrollo de tu tienda en línea",
+        image: "https://source.unsplash.com/random/800x600?marketing",
+        features: [
+            "SEO Avanzado",
+            "Campañas PPC",
+            "Analítica Web",
+            "Automatización"
+        ],
+        technologies: ["Google Ads", "Google Analytics", "HubSpot"],
+        caseStudy: {
+            client: "StartupX",
+            result: "+150% leads"
+        }
     }
 ];
 
@@ -55,6 +72,7 @@ function renderServices() {
         // Evento para abrir modal
         clone.querySelector('[data-modal-toggle]').addEventListener('click', () => {
             openServiceModal(service);
+            console.log('Modal abierto'); // Agrega este log para verificar que se está llamando a la función
         });
 
         container.appendChild(clone);
@@ -90,3 +108,88 @@ function openServiceModal(service) {
 
 // Inicializar al cargar la página
 document.addEventListener('DOMContentLoaded', renderServices);
+
+
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+});
+
+// Initialize Swiper
+const portfolioSwiper = new Swiper('.portfolioSwiper', {
+loop: true,
+slidesPerView: 'auto',
+centeredSlides: true,
+spaceBetween: 30,
+navigation: true,
+pagination: {
+el: '.portfolio-pagination',
+clickable: true,
+},
+breakpoints: {
+768: {
+    spaceBetween: 40
+}
+}
+});
+
+// Initialize tooltips
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formContent = document.getElementById('formContent');
+    const successMessage = document.getElementById('successMessage');
+    const resetFormButton = document.getElementById('resetForm');
+    const successCheckmark = document.querySelector('.success-checkmark');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission (replace with actual form submission)
+        formContent.style.display = 'none';
+        successMessage.style.display = 'block';
+        successCheckmark.style.display = 'block';
+        
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    resetFormButton.addEventListener('click', function() {
+        contactForm.reset();
+        successMessage.style.display = 'none';
+        formContent.style.display = 'block';
+    });
+    
+    // Floating label animation for select element
+    const selectElement = document.querySelector('select.form-control');
+    selectElement.addEventListener('change', function() {
+        if (this.value !== '') {
+            this.setAttribute('data-selected', 'true');
+        } else {
+            this.removeAttribute('data-selected');
+        }
+    });
+});
+
+  // Animación del hamburguesa
+const hamburger = document.querySelector('.hamburger-tech');
+const navbar = document.querySelector('.tech-nav');
+
+hamburger.addEventListener('click', function() {
+this.classList.toggle('active');
+});
+
+// Efecto scroll
+window.addEventListener('scroll', function() {
+if(window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+} else {
+    navbar.classList.remove('scrolled');
+}
+});
