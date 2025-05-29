@@ -227,8 +227,9 @@
                     <div class="swiper-slide">
                         <div class="project-card hover-transform">
                             <div class="card-overlay"></div>
-                            <img src="https://placehold.co/600x400" class="project-img" alt="Proyecto 1">
+                            <img src="assets/img/glgabogados.png" width="640" heigth="400" class="project-img ik" alt="Proyecto 1">
                             <div class="project-content">
+<<<<<<< Updated upstream
                                 <div class="project-badge">Website</div>
                                 <h3 class="project-title">Sitio Web</h3>
                                 <p class="project-description">Desarrollo de plataforma educativa con React y Node.js</p>
@@ -236,6 +237,15 @@
                                     <span class="tech-pill">Vue JS</span>
                                     <span class="tech-pill">Netlify</span>
                                     <span class="tech-pill">Bootstrap</span>
+=======
+                                <div class="project-badge">Desarollo Web</div>
+                                <h3 class="project-title">Sitio Web Corporativo</h3>
+                                <p class="project-description">DEsarrolllo de      </p>
+                                <div class="project-tech">
+                                    <span class="tech-pill">Wordpress</span>
+                                    <span class="tech-pill">Elementor</span>
+                                    <span class="tech-pill">PHP</span>
+>>>>>>> Stashed changes
                                 </div>
                                 <a href="https://timbal.com.mx" target="_blank" class="project-link">
                                     Ver Proyecto
@@ -400,8 +410,8 @@
             <div class="container">
                 <div class="row py-5" data-aos="fade-up">
                     <div class="col-md-8 offset-md-2 text-center">
-                        <h2 class="section-title">Contact Me</h2>
-                        <p class="section-subtitle">I'm here to help you with any questions or concerns you may have.</p>
+                        <h2 class="display-4 fw-bold mb-4 gradient-text">Contacta Me</h2>
+                        <p class="lead text-light">Ponte en contacto para ayudarte con el proyecto.</p>
                     </div>
                 </div>
       
@@ -458,61 +468,60 @@
                                 <div class="col-md-7">
                                     <div class="p-5">
                                         <div class="animate-in" style="animation-delay: 0.2s;">
-                                            <h3 class="fw-bold mb-4 text-dark">Send us a Message</h3>
-                                            <p class="text-muted mb-4">Please fill out the form below and we'll respond within 24 hours.</p>
+                                            <p class="text-muted mb-4">Porfavor, llena el formulario y en un lapso de 24 hrs nos comunicaremos contigo.</p>
                                             
-                                            <form id="contactForm">
-                                                <div class="row">
+                                            <form id="contactForm" onsubmit="sendToAirtable()">
+                                                m<div class="row">
                                                     <div class="col-md-6">
                                                         <div class="floating-input">
                                                             <input type="text" class="form-control" id="firstName" placeholder=" " required>
-                                                            <label for="firstName">First Name</label>
+                                                            <label for="firstName">Nombre</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="floating-input">
                                                             <input type="text" class="form-control" id="lastName" placeholder=" " required>
-                                                            <label for="lastName">Last Name</label>
+                                                            <label for="lastName">Apellido</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="floating-input">
                                                     <input type="email" class="form-control" id="email" placeholder=" " required>
-                                                    <label for="email">Email Address</label>
+                                                    <label for="email">Correo</label>
                                                 </div>
                                                 
                                                 <div class="floating-input">
                                                     <input type="tel" class="form-control" id="phone" placeholder=" ">
-                                                    <label for="phone">Phone Number (optional)</label>
+                                                    <label for="phone">Celular</label>
                                                 </div>
                                                 
                                                 <div class="floating-input">
                                                     <select class="form-control" id="subject" required>
-                                                        <option value="" selected disabled>Select a subject</option>
-                                                        <option value="general">General Inquiry</option>
-                                                        <option value="support">Technical Support</option>
-                                                        <option value="billing">Billing Question</option>
-                                                        <option value="partnership">Partnership Opportunity</option>
+                                                        <option value="" selected disabled>Selecciona una opción</option>
+                                                        <option value="Demo Kommo">Kommo CRM</option>
+                                                        <option value="Sitio Web">Sitio Web</option>
+                                                        <option value="Publicidad">Publicidad</option>
+                                                        <option value="Tienda en Linea">Tienda en Linea</option>
                                                     </select>
-                                                    <label for="subject">Subject</label>
+                                                    
                                                 </div>
                                                 
                                                 <div class="floating-input">
                                                     <textarea class="form-control" id="message" rows="4" placeholder=" " required></textarea>
-                                                    <label for="message">Your Message</label>
+                                                    <label for="message">Mensaje</label>
                                                 </div>
                                                 
                                                 <div class="form-check mb-4">
                                                     <input class="form-check-input" type="checkbox" id="newsletter">
                                                     <label class="form-check-label text-muted" for="newsletter">
-                                                        Subscribe to our newsletter for updates and promotions
+                                                        Suscribete para mas infromacio
                                                     </label>
                                                 </div>
                                                 
                                                 <div id="formContent">
                                                     <button type="submit" class="btn btn-primary px-4 py-3">
-                                                        <i class="bi bi-send me-2"></i>Send Message
+                                                        <i class="bi bi-send me-2"></i>Enviar Mensaje
                                                     </button>
                                                 </div>
                                                 
@@ -523,9 +532,9 @@
                                                             <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                                                         </svg>
                                                     </div>
-                                                    <h4 class="mt-4 text-success">Message Sent Successfully!</h4>
-                                                    <p class="text-muted">Thank you for contacting us. We'll get back to you shortly.</p>
-                                                    <button type="button" id="resetForm" class="btn btn-outline-primary mt-3">Send Another Message</button>
+                                                    <h4 class="mt-4 text-success">Mensaje Enviado!</h4>
+                                                    <p class="text-muted">Gracias por la informaci+</p>
+                                                    <button type="button" id="resetForm" class="btn btn-outline-primary mt-3">Limpiar Formulario</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -684,6 +693,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/aos.js"></script>
+    <script src="assets/js/airtable.js"></script>
     <script src="assets/js/web.js"></script>
     <script>
       

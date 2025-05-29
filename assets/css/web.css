@@ -83,33 +83,33 @@ body {
 }
 
 .form-control {
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    background-color: var(--light-bg);
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    padding: 0.75rem 1.25rem !important;
+    background-color: var(--light-bg) !important;
+    margin-bottom: 1.5rem !important;
+    transition: all 0.3s ease !important;
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;;
+    background-color: #fff !important;
 }
 
 .form-label {
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: #4b5563;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;;
+    color: #4b5563 !important;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.75rem 2rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
 }
 
 .btn-primary:hover {
@@ -151,8 +151,8 @@ body {
 }
 
 .form-check-input:checked {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .animate-in {
