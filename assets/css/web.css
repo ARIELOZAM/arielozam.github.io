@@ -321,15 +321,19 @@ body {
 
 /* Swiper Custom Styles */
 .portfolio-next, .portfolio-prev {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     border-radius: 50%;
     color: white;
     transition: all 0.3s ease;
+    padding: 40px;
 }
-
+.portfolio-next::after, .portfolio-prev::after {
+    font-size: 24px;
+    color: white;
+}
 .portfolio-next:hover, .portfolio-prev:hover {
     background: #6366f1;
     transform: scale(1.1);

@@ -119,20 +119,23 @@ document.addEventListener('DOMContentLoaded', renderServices);
 
 // Initialize Swiper
 const portfolioSwiper = new Swiper('.portfolioSwiper', {
-loop: true,
-slidesPerView: 'auto',
-centeredSlides: true,
-spaceBetween: 30,
-navigation: true,
-pagination: {
-el: '.portfolio-pagination',
-clickable: true,
-},
-breakpoints: {
-768: {
-    spaceBetween: 40
-}
-}
+    loop: true,
+    slidesPerView: 1, // Show only one slide at a time
+    centeredSlides: true,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next', // Add navigation arrows
+        prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+        el: '.portfolio-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            spaceBetween: 40
+        }
+    }
 });
 
 // Initialize tooltips
