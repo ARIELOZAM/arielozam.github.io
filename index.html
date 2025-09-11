@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +13,9 @@
     <title>Desarrollador Web y Diseñador UI | Freelance | México</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bootstrap-default.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-18GQVJ9ZHL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,77 +24,196 @@
         gtag("config", "G-18GQVJ9ZHL");
     </script>
 </head>
+
 <body>
-    <nav
-        class="navbar navbar-expand-sm navbar-light bg-light"
-    ><div class="container">
-        
-        <a class="navbar-brand" href="#">arielozam</a>
-        <button
-            class="navbar-toggler d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        ></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page" 
-                        >Inicio <span class="visually-hidden">(current)</span></a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="dropdownId"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Servicios</a
-                    >
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-            <div class="d-flex my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0">
-                    Search
-                </button>
-            </form>
-        </div>
-    </div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">arielozam</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Inicio <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Servicios</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-menu">
+                            <a class="dropdown-item" href="#">Desarrollo Web</a>
+                            <a class="dropdown-item" href="#">Diseño UI</a>
+                            <a class="dropdown-item" href="#">Generación de Leads</a>
+                            <a class="dropdown-item" href="#">Paid Media</a>
+                            <a class="dropdown-item" href="#">Kommo CRM</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Clientes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="d-flex my-2 my-lg-0">
+                    <a href="#" class="btn btn-primary my-2 my-sm-0">
+                        Agendar Llamada
+                    </a>
+                    </form>
+                </div>
+            </div>
     </nav>
 
     <!-- Header Section -->
-     <header>
+    <header class="min-vh-100 d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Genera Leads y has que tus camapañas funcionen.</h2>
-                    <p>Tu desarrollo listo para aumentar tus ventas, tu sitio web tiene que vender y lo puedes lograr solo necesitas el sitio web correcto.</p>
+                    <h2>Genera Leads y has que tus campañas funcionen.</h2>
+                    <p>Tu desarrollo listo para aumentar tus ventas, tu sitio web tiene que vender y lo puedes lograr
+                        solo necesitas el sitio web correcto.</p>
                     <a href="#" class="btn btn-primary">Quiero Vender Más</a>
+                    <a href="#" class="btn btn-outline-success">Agenda una llamada</a>
                 </div>
             </div>
         </div>
-     </header>
-     <!-- Header Section Ended -->
+    </header>
+    <!-- Header Section Ended -->
 
-     <section>
+    <!-- Servicios Section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Servicios</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Imagen 1">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Desarrollo Web</h3>
+                            <p class="card-text">Text</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Saber Más</a>
+                        </div>
+                    </div>
 
-     </section>
-    
+                </div>W
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Imagen 1">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Diseño UI</h3>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                class="img-fluid" alt="Imagen 1">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Generación de Leads</h3>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Inicio</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sobre Mi</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Servicios</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Postafolio</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
+                                    class="visually-hidden">Email address</label> <input id="newsletter1" type="email"
+                                    class="form-control" placeholder="Email address"> <button class="btn btn-primary"
+                                    type="button">Subscribe</button> </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2025 ARIELOZAM. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi"
+                                    width="24" height="24">
+                                    <use xlink:href="#instagram"></use>
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi"
+                                    width="24" height="24" aria-hidden="true">
+                                    <use xlink:href="#facebook"></use>
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </footer>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
-    
+
 </body>
+
 </html>
