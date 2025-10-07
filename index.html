@@ -26,25 +26,54 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <!-- Navigation: Stunning corporate style -->
+    <style>
+      .stunning-nav { backdrop-filter: blur(10px); background: rgba(15, 18, 24, 0.70); border-bottom: 1px solid rgba(255,255,255,0.08); padding: .5rem 0; transition: background-color .3s ease, box-shadow .3s ease, padding .3s ease, backdrop-filter .3s ease; }
+      .stunning-nav.nav-scrolled { background: rgba(15, 18, 24, 0.92); box-shadow: 0 6px 18px rgba(0,0,0,.25); padding: .35rem 0; }
+      .stunning-nav .navbar-brand img { height: 40px; width: auto; transition: transform .3s ease, opacity .3s ease; }
+      .stunning-nav.nav-scrolled .navbar-brand img { transform: scale(.95); opacity: .95; }
+      .stunning-nav .nav-link { color: #e5e7eb; font-weight: 500; margin: 0 .6rem; position: relative; transition: color .2s ease, transform .2s ease; }
+      .stunning-nav .nav-link:hover { color: #ffffff; transform: translateY(-1px); }
+      .stunning-nav .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: linear-gradient(90deg, #4f46e5, #06b6d4); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+      .stunning-nav .nav-link:hover::after { transform: scaleX(1); }
+      .stunning-nav .dropdown-menu { border-radius: .6rem; box-shadow: 0 12px 30px rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.10); background: #111827; padding: .5rem; opacity: 0; transform: translateY(8px) scale(.98); transition: opacity .18s ease, transform .18s ease; }
+      .stunning-nav .dropdown:hover .dropdown-menu, .stunning-nav .dropdown-menu.show { opacity: 1; transform: translateY(0) scale(1); }
+      .stunning-nav .dropdown-item { color: #e5e7eb; border-radius: .4rem; }
+      .stunning-nav .dropdown-item:hover { background: rgba(255,255,255,.08); color: #ffffff; }
+      .stunning-nav .btn-cta { background: linear-gradient(90deg, #4f46e5, #0ea5e9); border: none; color: #fff; font-weight: 600; box-shadow: 0 8px 22px rgba(14,165,233,.35); padding: .5rem 1rem; transition: transform .2s ease, box-shadow .2s ease; }
+      .stunning-nav .btn-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
+      .stunning-nav.nav-scrolled .btn-cta { box-shadow: 0 6px 18px rgba(14,165,233,.45); }
+      .stunning-nav .navbar-toggler { border-color: rgba(255,255,255,.40); }
+      .stunning-nav .navbar-toggler-icon { filter: invert(1); }
+      /* Hover dropdown for desktop */
+      @media (min-width: 768px) {
+        .stunning-nav .dropdown:hover .dropdown-menu { display: block; }
+      }
+      /* Collapse transitions on viewport change */
+      .stunning-nav .navbar-collapse.collapsing { opacity: .7; transition: height .35s ease, opacity .25s ease; }
+      .stunning-nav .navbar-collapse.collapse.show { opacity: 1; }
+      @media (max-width: 767.98px) {
+        .stunning-nav { background: rgba(15, 18, 24, 0.90); padding: .6rem 0; }
+      }
+    </style>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top stunning-nav">
         <div class="container">
-
-            <a class="navbar-brand" href="#">arielozam</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand" href="#"><img src="assets/img/new_logo_h_white.png" alt="ARIELOZAM"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation"></button>
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Inicio <span
-                                class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active" href="#" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Acerca de</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Servicios</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-menu">
                             <a class="dropdown-item" href="#">Desarrollo Web</a>
                             <a class="dropdown-item" href="#">Diseño UI</a>
@@ -58,24 +87,131 @@
                     <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
                 </ul>
                 <div class="d-flex my-2 my-lg-0">
-                    <a href="#" class="btn btn-primary my-2 my-sm-0">
-                        Agendar Llamada
-                    </a>
-                    </form>
+                    <a href="#" class="btn btn-cta my-2 my-sm-0">Agendar Llamada</a>
                 </div>
             </div>
+        </div>
     </nav>
+    <script>
+      // Navbar scroll animation toggle
+      (function() {
+        const nav = document.querySelector('.stunning-nav');
+        const toggleNavClass = () => {
+          if (!nav) return;
+          const scrolled = window.scrollY > 24;
+          nav.classList.toggle('nav-scrolled', scrolled);
+        };
+        toggleNavClass();
+        window.addEventListener('scroll', toggleNavClass, { passive: true });
+      })();
+    </script>
 
     <!-- Header Section -->
-    <header class="min-vh-100 d-flex align-items-center">
+    <style>
+      /* Hero styles for header */
+      header.hero {
+        background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      header.hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      header.hero .container,
+      header.hero .row,
+      header.hero .col-md-8 {
+        position: relative;
+        z-index: 1;
+      }
+      /* Quick contact bar on hero */
+      header.hero .quick-contact {
+        background: rgba(255,255,255,.92);
+        backdrop-filter: blur(4px);
+        border-radius: .75rem;
+        box-shadow: 0 10px 24px rgba(0,0,0,.15);
+        padding: .75rem 1rem;
+      }
+      header.hero .quick-contact .form-control { min-width: 220px; }
+      header.hero .quick-contact .input-group-text { background: #fff; }
+      header.hero h2, header.hero p {
+        color: #fff;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      }
+      header.hero h2 {
+        font-weight: 700;
+      }
+      header.hero p {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+    </style>
+    <header class="hero min-vh-100 d-flex align-items-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Genera Leads y has que tus campañas funcionen.</h2>
-                    <p>Tu desarrollo listo para aumentar tus ventas, tu sitio web tiene que vender y lo puedes lograr
-                        solo necesitas el sitio web correcto.</p>
-                    <a href="#" class="btn btn-primary">Quiero Vender Más</a>
-                    <a href="#" class="btn btn-outline-success">Agenda una llamada</a>
+            <div class="row align-items-center">
+                <!-- Col izquierda: texto y botones -->
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+                    <h2>Impulsa tus ventas con sitios y campañas eficaces.</h2>
+                    <p>Diseño y desarrollo listos para convertir visitas en clientes. Construimos páginas que venden, optimizadas para captar leads y escalar tus resultados.</p>
+                    <div class="d-flex gap-3 flex-wrap mt-3">
+                      <a href="#contact" class="btn btn-primary btn-lg">Quiero vender más</a>
+                      <a href="#contact" class="btn btn-outline-success btn-lg">Agenda una llamada</a>
+                    </div>
+                </div>
+                <!-- Col derecha: formulario estándar -->
+                <div class="col-md-6" data-aos="fade-left">
+                  <div class="card shadow-sm border-0 p-3 p-md-4">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-paper-plane me-2"></i>Contáctanos</h5>
+                    <form>
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <label class="form-label">Nombre completo</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Tu nombre" required />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Teléfono</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            <input type="tel" class="form-control" placeholder="Tu teléfono" required />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Correo</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" placeholder="Tu correo" required />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label">Servicio de interés</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                            <select class="form-select" required>
+                              <option value="" selected disabled>Selecciona un servicio</option>
+                              <option>Desarrollo Web</option>
+                              <option>Diseño UI/UX</option>
+                              <option>Generación de Leads</option>
+                              <option>Kommo CRM</option>
+                              <option>Paid Media</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label">Mensaje</label>
+                          <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-success"><i class="fas fa-paper-plane me-2"></i>Contactar ahora</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
             </div>
         </div>
@@ -83,134 +219,577 @@
     <!-- Header Section Ended -->
 
     <!-- Servicios Section -->
-    <section>
+    <style>
+      /* Services card styles */
+      .service-card { transition: transform .2s ease, box-shadow .2s ease; }
+      .service-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+      .service-card-image { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: .5rem .5rem 0 0; }
+      .service-card-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform .4s ease; }
+      .service-card:hover .service-card-image img { transform: scale(1.05); }
+      .service-card-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 100%); }
+      .service-card .card-body { padding: 1.25rem; }
+      .service-card .btn { border-radius: 999px; }
+      /* Blog card image uniform sizing */
+      #blog .card-img-top { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+    </style>
+    <section class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2>Servicios</h2>
+                <div class="col-12 text-center mb-4" data-aos="fade-up">
+                    <h2 class="fw-bold">Servicios</h2>
+                    <p class="text-muted">Soluciones enfocadas en resultados para impulsar tu presencia digital y convertir más.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                class="img-fluid" alt="Imagen 1">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Desarrollo Web</h3>
-                            <p class="card-text">Text</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Saber Más</a>
-                        </div>
-                    </div>
-
-                </div>W
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                class="img-fluid" alt="Imagen 1">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Diseño UI</h3>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
+            <div class="servicesSwiper swiper" data-aos="fade-up">
+              <div class="swiper-wrapper">
+                <!-- Desarrollo Web -->
+                <div class="swiper-slide">
+                  <div class="card service-card h-100 shadow-sm border-0">
+                      <div class="service-card-image">
+                          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Desarrollo Web profesional">
+                          <div class="service-card-overlay"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3 class="h5 fw-semibold">Desarrollo Web</h3>
+                          <p class="mb-3">Sitios rápidos, optimizados para SEO y pensados para escalar tu negocio.</p>
+                          <ul class="list-unstyled small text-muted mb-3">
+                              <li>Landing pages de alta conversión</li>
+                              <li>Integraciones con CRM y automatización</li>
+                              <li>Optimización de Core Web Vitals</li>
+                          </ul>
+                          <div class="d-flex gap-2">
+                              <a href="#" class="btn btn-primary">Saber más</a>
+                              <a href="#" class="btn btn-outline-success">Cotizar</a>
+                          </div>
+                      </div>
+                  </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="https://plus.unsplash.com/premium_photo-1755520510050-81690a732372?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                class="img-fluid" alt="Imagen 1">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Generación de Leads</h3>
-                            <p class="card-text">Text</p>
-                        </div>
-                    </div>
+                <!-- Diseño UI/UX -->
+                <div class="swiper-slide">
+                  <div class="card service-card h-100 shadow-sm border-0">
+                      <div class="service-card-image">
+                          <img src="https://images.unsplash.com/photo-1529333166437-7750f9c5b22b?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Diseño UI/UX">
+                          <div class="service-card-overlay"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3 class="h5 fw-semibold">Diseño UI/UX</h3>
+                          <p class="mb-3">Interfaces claras y enfocadas en conversión para mejorar la experiencia del usuario.</p>
+                          <ul class="list-unstyled small text-muted mb-3">
+                              <li>Prototipado y diseño de interfaces</li>
+                              <li>Arquitectura de información</li>
+                              <li>Pruebas de usabilidad</li>
+                          </ul>
+                          <div class="d-flex gap-2">
+                              <a href="#" class="btn btn-primary">Ver portfolio</a>
+                              <a href="#" class="btn btn-outline-success">Solicitar propuesta</a>
+                          </div>
+                      </div>
+                  </div>
                 </div>
-
-
+                <!-- Generación de Leads -->
+                <div class="swiper-slide">
+                  <div class="card service-card h-100 shadow-sm border-0">
+                      <div class="service-card-image">
+                          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Generación de Leads">
+                          <div class="service-card-overlay"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3 class="h5 fw-semibold">Generación de Leads</h3>
+                          <p class="mb-3">Campañas y funnels listos para captar oportunidades y escalar tus ventas.</p>
+                          <ul class="list-unstyled small text-muted mb-3">
+                              <li>Landing pages + automatizaciones</li>
+                              <li>Optimización de conversiones (CRO)</li>
+                              <li>Integración con plataformas de Ads</li>
+                          </ul>
+                          <div class="d-flex gap-2">
+                              <a href="#" class="btn btn-primary">Empezar</a>
+                              <a href="#" class="btn btn-outline-success">Agenda una llamada</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Paid Media -->
+                <div class="swiper-slide">
+                  <div class="card service-card h-100 shadow-sm border-0">
+                      <div class="service-card-image">
+                          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Paid Media">
+                          <div class="service-card-overlay"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3 class="h5 fw-semibold">Paid Media</h3>
+                          <p class="mb-3">Gestión de campañas en Google, Meta y más para performance real.</p>
+                          <ul class="list-unstyled small text-muted mb-3">
+                              <li>Planificación y ejecución de campañas</li>
+                              <li>Segmentación, audiencias y remarketing</li>
+                              <li>Optimización continua y reporting</li>
+                          </ul>
+                          <div class="d-flex gap-2">
+                              <a href="#" class="btn btn-primary">Saber más</a>
+                              <a href="#" class="btn btn-outline-success">Cotizar</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <!-- Kommo CRM -->
+                <div class="swiper-slide">
+                  <div class="card service-card h-100 shadow-sm border-0">
+                      <div class="service-card-image">
+                          <img src="https://images.unsplash.com/photo-1520671459574-0f3c6c6a4f74?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Kommo CRM">
+                          <div class="service-card-overlay"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3 class="h5 fw-semibold">Kommo CRM</h3>
+                          <p class="mb-3">Implementación y automatizaciones con Kommo para ordenar tu prospección.</p>
+                          <ul class="list-unstyled small text-muted mb-3">
+                              <li>Setup de pipelines y etapas</li>
+                              <li>Integración con formularios y WhatsApp</li>
+                              <li>Automatizaciones y bots de seguimiento</li>
+                          </ul>
+                          <div class="d-flex gap-2">
+                              <a href="#" class="btn btn-primary">Ver casos</a>
+                              <a href="#" class="btn btn-outline-success">Solicitar demo</a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="services-pagination swiper-pagination"></div>
+                <div class="btn-group">
+                  <button class="btn btn-outline-secondary btn-sm services-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                  <button class="btn btn-outline-secondary btn-sm services-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+              </div>
             </div>
-        </div>
         </div>
     </section>
 
+    <section id="clients" class="py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center" data-aos="fade-up">
+            <h2 class="fw-bold">Lo que dicen nuestros clientes</h2>
+            <p class="text-muted">Testimonios y valoraciones de proyectos reales.</p>
+          </div>
+        </div>
+        <div class="clientsSwiper swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80" class="rounded-circle me-3" width="56" height="56" alt="Cliente 1">
+                    <div>
+                      <h6 class="mb-0">María Rodríguez</h6>
+                      <small class="text-muted">CMO, StartupX</small>
+                    </div>
+                  </div>
+                  <p class="mb-3">“Ariel y su equipo nos ayudaron a duplicar los leads con un sitio y campañas bien optimizadas. Súper recomendados.”</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" class="rounded-circle me-3" width="56" height="56" alt="Cliente 2">
+                    <div>
+                      <h6 class="mb-0">Carlos Gómez</h6>
+                      <small class="text-muted">Director, Comercio360</small>
+                    </div>
+                  </div>
+                  <p class="mb-3">“El rediseño UI/UX mejoró la tasa de conversión y la experiencia de nuestros usuarios.”</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=120&q=80" class="rounded-circle me-3" width="56" height="56" alt="Cliente 3">
+                    <div>
+                      <h6 class="mb-0">Ana López</h6>
+                      <small class="text-muted">Founder, SaludPro</small>
+                    </div>
+                  </div>
+                  <p class="mb-3">“Implementaron Kommo CRM y automatizaciones que nos ahorraron horas de trabajo.”</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=120&q=80" class="rounded-circle me-3" width="56" height="56" alt="Cliente 4">
+                    <div>
+                      <h6 class="mb-0">Jorge Martínez</h6>
+                      <small class="text-muted">COO, RetailPlus</small>
+                    </div>
+                  </div>
+                  <p class="mb-3">“Las campañas de Paid Media nos dieron un ROAS superior al esperado.”</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&fit=crop&w=120&q=80" class="rounded-circle me-3" width="56" height="56" alt="Cliente 5">
+                    <div>
+                      <h6 class="mb-0">Sofía Herrera</h6>
+                      <small class="text-muted">Head of Growth, FinTechCo</small>
+                    </div>
+                  </div>
+                  <p class="mb-3">“La generación de leads y el nuevo sitio aumentaron la conversión notablemente.”</p>
+                  <div class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="clients-pagination swiper-pagination"></div>
+            <div class="btn-group">
+              <button class="btn btn-outline-secondary btn-sm clients-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+              <button class="btn btn-outline-secondary btn-sm clients-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center" data-aos="fade-up">
+            <h2 class="fw-bold">Blog</h2>
+            <p class="text-muted">Guías, ideas y casos prácticos para crecer en digital.</p>
+          </div>
+        </div>
+        <div class="blogSwiper swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Post 1 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Optimiza tu landing">
+                <div class="card-body">
+                  <h5 class="card-title">5 claves para optimizar tu landing</h5>
+                  <p class="card-text text-muted">Mejora la conversión con prácticas comprobadas de CRO y UX.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Leer artículo</a>
+                </div>
+              </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1531498860502-7c67cf02f3c5?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Automatiza con CRM">
+                <div class="card-body">
+                  <h5 class="card-title">Automatiza tu marketing con Kommo CRM</h5>
+                  <p class="card-text text-muted">Ahorra tiempo y aumenta tus ventas con flujos automatizados.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Leer artículo</a>
+                </div>
+              </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="swiper-slide">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Diseño UI que convierte">
+                <div class="card-body">
+                  <h5 class="card-title">Diseño UI que convierte</h5>
+                  <p class="card-text text-muted">Cómo crear interfaces enfocadas en objetivos y resultados.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Leer artículo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="blog-pagination swiper-pagination"></div>
+            <div class="btn-group">
+              <button class="btn btn-outline-secondary btn-sm blog-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+              <button class="btn btn-outline-secondary btn-sm blog-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4" data-aos="fade-up">
+          <a href="#" class="btn btn-primary">Ver más artículos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <style>
+        .float-anim { animation: floatUpDown 6s ease-in-out infinite; }
+        @keyframes floatUpDown { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
+        /* Fallback de visibilidad para AOS en Contacto */
+        #contact [data-aos]:not(.aos-animate) { opacity: 1 !important; transform: none !important; }
+      </style>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center" data-aos="fade-up">
+            <h2 class="fw-bold"><i class="fas fa-envelope-open-text me-2"></i>Contacto</h2>
+            <p class="text-muted">Cuéntanos tu idea y construyamos algo increíble.</p>
+          </div>
+        </div>
+        <div class="row align-items-center g-4">
+          <!-- Formulario 6 columnas -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+            <div class="card shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="fw-bold mb-3"><i class="fas fa-comments me-2"></i>Hablemos de tu proyecto</h5>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label">Nombre completo</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="Tu nombre" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Teléfono</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                        <input type="tel" class="form-control" placeholder="Tu teléfono" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Correo</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Tu correo" required />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Servicio de interés</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                        <select class="form-select" required>
+                          <option value="" selected disabled>Selecciona un servicio</option>
+                          <option>Desarrollo Web</option>
+                          <option>Diseño UI/UX</option>
+                          <option>Generación de Leads</option>
+                          <option>Kommo CRM</option>
+                          <option>Paid Media</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Mensaje</label>
+                      <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end mt-3">
+                    <button class="btn btn-success"><i class="fas fa-paper-plane me-2"></i>Contactar ahora</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Imagen/gráfico animado 6 columnas -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+            <div class="text-center">
+              <img class="img-fluid rounded float-anim shadow" alt="Ilustración de contacto"
+                   src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80" />
+              <p class="text-muted mt-3">Visualizamos tus ideas y las convertimos en resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <footer class="py-5">
-                <div class="row">
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Inicio</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sobre Mi</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Servicios</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Postafolio</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-                            </li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of what's new and exciting from us.</p>
-                            <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
-                                    class="visually-hidden">Email address</label> <input id="newsletter1" type="email"
-                                    class="form-control" placeholder="Email address"> <button class="btn btn-primary"
-                                    type="button">Subscribe</button> </div>
-                        </form>
+    <style>
+      .site-footer a { text-decoration: none; }
+      .site-footer .footer-title { font-weight: 600; font-size: 1rem; letter-spacing: .02em; }
+      .site-footer .contact-item { display: flex; align-items: center; gap: .5rem; }
+      .site-footer .contact-item span { opacity: .85; }
+      .site-footer .brand { font-weight: 800; font-size: 1.25rem; letter-spacing: .05em; }
+      .site-footer .newsletter .form-control { max-width: 320px; }
+      .site-footer .bottom-bar { border-top: 1px solid rgba(255,255,255,.1); }
+    </style>
+    <footer class="site-footer bg-dark text-light">
+        <div class="container py-5">
+            <div class="row g-4">
+                <!-- Column 1: Logo y contacto -->
+                <div class="col-12 col-md-3">
+                    <div class="brand mb-2">ARIELOZAM</div>
+                    <p class="text-secondary">Consultoría y desarrollo para impulsar tu negocio digital.</p>
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <div class="contact-item">
+                            <span class="text-secondary">Email:</span>
+                            <a class="text-light" href="mailto:hola@arielozam.com">hola@arielozam.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="text-secondary">Tel:</span>
+                            <a class="text-light" href="tel:+521234567890">+52 123 456 7890</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="text-secondary">Ubicación:</span>
+                            <span class="text-light">CDMX, México</span>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p>© 2025 ARIELOZAM. All rights reserved.</p>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi"
-                                    width="24" height="24">
-                                    <use xlink:href="#instagram"></use>
-                                </svg></a></li>
-                        <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi"
-                                    width="24" height="24" aria-hidden="true">
-                                    <use xlink:href="#facebook"></use>
-                                </svg></a></li>
+
+                <!-- Column 2: Menú principal -->
+                <div class="col-6 col-md-3">
+                    <h5 class="footer-title mb-3">Menú</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Inicio</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Sobre mí</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Servicios</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Portafolio</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Contacto</a></li>
                     </ul>
                 </div>
-            </footer>
+
+                <!-- Column 3: Otros enlaces -->
+                <div class="col-6 col-md-3">
+                    <h5 class="footer-title mb-3">Plataformas</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://www.kommo.com/" target="_blank" rel="noopener" class="nav-link p-0 text-light">Kommo CRM</a></li>
+                        <li class="nav-item mb-2"><a href="https://clickup.com/" target="_blank" rel="noopener" class="nav-link p-0 text-light">ClickUp</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.bitrix24.com/" target="_blank" rel="noopener" class="nav-link p-0 text-light">Bitrix24</a></li>
+                        <li class="nav-item mb-2"><a href="https://monday.com/" target="_blank" rel="noopener" class="nav-link p-0 text-light">Monday.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-12 col-md-3 newsletter">
+                    <h5 class="footer-title mb-3">Suscríbete</h5>
+                    <p class="text-secondary">Recibe novedades y recursos para acelerar tus resultados.</p>
+                    <form>
+                        <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <input id="newsletter-email" type="email" class="form-control" placeholder="Tu correo" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bottom-bar d-flex flex-column flex-sm-row justify-content-between py-4 mt-4">
+                <p class="mb-0">© 2025 ARIELOZAM. Todos los derechos reservados.</p>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="ms-3"><a class="text-light" href="#" aria-label="Instagram">Instagram</a></li>
+                    <li class="ms-3"><a class="text-light" href="#" aria-label="Facebook">Facebook</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     <script src="assets/js/app.js"></script>
+    <!-- JS: Swiper and AOS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Init AOS animations
+        if (window.AOS) {
+          AOS.init({ once: true, offset: 120, duration: 600, easing: 'ease-out' });
+        }
+        // Fallback: si AOS no carga, aseguramos que los elementos sean visibles
+        if (!window.AOS) {
+          try {
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+              el.classList.add('aos-animate');
+            });
+          } catch (e) {
+            // noop
+          }
+        }
+
+        // Sliders
+        if (window.Swiper) {
+          // Services slider
+          new Swiper('.servicesSwiper', {
+            loop: true,
+            watchOverflow: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 24,
+            speed: 600,
+            grabCursor: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            breakpoints: {
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 2 }
+            },
+            pagination: { el: '.services-pagination', clickable: true },
+            navigation: { nextEl: '.services-next', prevEl: '.services-prev' }
+          });
+
+          new Swiper('.clientsSwiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            autoplay: { delay: 5000 },
+            breakpoints: {
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 3 }
+            },
+            pagination: { el: '.clients-pagination', clickable: true },
+            navigation: { nextEl: '.clients-next', prevEl: '.clients-prev' }
+          });
+
+          // Blog slider
+          new Swiper('.blogSwiper', {
+            loop: true,
+            watchOverflow: false,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 24,
+            speed: 600,
+            grabCursor: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            breakpoints: {
+              576: { slidesPerView: 2 },
+              992: { slidesPerView: 2 }
+            },
+            pagination: { el: '.blog-pagination', clickable: true },
+            navigation: { nextEl: '.blog-next', prevEl: '.blog-prev' }
+          });
+        }
+      });
+    </script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
 
