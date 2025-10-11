@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Google Fonts: Barlow Condensed for headings, Poppins for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-18GQVJ9ZHL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,10 +29,10 @@
     </script>
 </head>
 
-<body>
+<body class="home">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top stunning-nav">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/img/new_logo_h_white.png" alt="ARIELOZAM"></a>
+            <a class="navbar-brand" href="#"><img src="assets/img/logo_white_wt.png" alt="ARIELOZAM"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -45,19 +49,19 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-menu">
-                            <a class="dropdown-item" href="#">Desarrollo Web</a>
-                            <a class="dropdown-item" href="#">Diseño UI</a>
-                            <a class="dropdown-item" href="#">Generación de Leads</a>
-                            <a class="dropdown-item" href="#">Paid Media</a>
-                            <a class="dropdown-item" href="#">Kommo CRM</a>
+                            <a class="dropdown-item" href="./services/desarrollo-web.html">Desarrollo Web</a>
+                            <a class="dropdown-item" href="./services/diseno-ui.html">Diseño UI</a>
+                            <a class="dropdown-item" href="./services/generacion-leads.html">Generación de Leads</a>
+                            <a class="dropdown-item" href="./services/">Paid Media</a>
+                            <a class="dropdown-item active" href="./services/kommo-crm.html">Kommo CRM</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Clientes</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="#cta-negocio" class="nav-link">Contacto</a></li>
                 </ul>
                 <div class="d-flex my-2 my-lg-0">
-                    <a href="#" class="btn btn-cta my-2 my-sm-0">Agendar Llamada</a>
+                    <a href="#" class="btn btn-primary my-2 my-sm-0">Agendar Llamada</a>
                 </div>
             </div>
         </div>
@@ -68,66 +72,17 @@
     <header class="hero min-vh-100 d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Col izquierda: texto y botones -->
-                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-                    <h2>Impulsa tus ventas con sitios y campañas eficaces.</h2>
-                    <p>Diseño y desarrollo listos para convertir visitas en clientes. Construimos páginas que venden, optimizadas para captar leads y escalar tus resultados.</p>
-                    <div class="d-flex gap-3 flex-wrap mt-3">
-                      <a href="#contact" class="btn btn-primary btn-lg">Quiero vender más</a>
-                      <a href="#contact" class="btn btn-outline-success btn-lg">Agenda una llamada</a>
+                <!-- Col izquierda: texto y botón principal -->
+                <div class="col-md-8 mb-4 mb-md-0" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold">Impulsa tus ventas con sitios y campañas eficaces.</h1>
+                    <p class="lead">Diseño y desarrollo listos para convertir visitas en clientes. Construimos páginas que venden, optimizadas para captar leads y escalar tus resultados.</p>
+                    <div class="mt-4">
+                      <a href="contact-wizard.html" class="btn btn-primary btn-lg">Agenda tu consultoría gratuita</a>
                     </div>
                 </div>
-                <!-- Col derecha: formulario estándar -->
-                <div class="col-md-6" data-aos="fade-left">
-                  <div class="card shadow-sm border-0 p-3 p-md-4">
-                    <h5 class="fw-bold mb-3"><i class="fas fa-paper-plane me-2"></i>Contáctanos</h5>
-                    <form>
-                      <div class="row g-3">
-                        <div class="col-12">
-                          <label class="form-label">Nombre completo</label>
-                          <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Tu nombre" required />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <label class="form-label">Teléfono</label>
-                          <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            <input type="tel" class="form-control" placeholder="Tu teléfono" required />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <label class="form-label">Correo</label>
-                          <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            <input type="email" class="form-control" placeholder="Tu correo" required />
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <label class="form-label">Servicio de interés</label>
-                          <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
-                            <select class="form-select" required>
-                              <option value="" selected disabled>Selecciona un servicio</option>
-                              <option>Desarrollo Web</option>
-                              <option>Diseño UI/UX</option>
-                              <option>Generación de Leads</option>
-                              <option>Kommo CRM</option>
-                              <option>Paid Media</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <label class="form-label">Mensaje</label>
-                          <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-end mt-3">
-                        <button class="btn btn-success"><i class="fas fa-paper-plane me-2"></i>Contactar ahora</button>
-                      </div>
-                    </form>
-                  </div>
+                <!-- Col derecha: imagen o espacio vacío para balance visual -->
+                <div class="col-md-4 d-none d-md-block" data-aos="fade-left">
+                  
                 </div>
             </div>
         </div>
@@ -162,7 +117,7 @@
                           </ul>
                           <div class="d-flex gap-2">
                               <a href="#" class="btn btn-primary">Saber más</a>
-                              <a href="#" class="btn btn-outline-success">Cotizar</a>
+                              <a href="#" class="btn btn-outline-secondary">Cotizar</a>
                           </div>
                       </div>
                   </div>
@@ -184,7 +139,7 @@
                           </ul>
                           <div class="d-flex gap-2">
                               <a href="#" class="btn btn-primary">Ver portfolio</a>
-                              <a href="#" class="btn btn-outline-success">Solicitar propuesta</a>
+                              <a href="#" class="btn btn-outline-secondary">Solicitar propuesta</a>
                           </div>
                       </div>
                   </div>
@@ -206,7 +161,7 @@
                           </ul>
                           <div class="d-flex gap-2">
                               <a href="#" class="btn btn-primary">Empezar</a>
-                              <a href="#" class="btn btn-outline-success">Agenda una llamada</a>
+                              <a href="#" class="btn btn-outline-secondary">Agenda una llamada</a>
                           </div>
                       </div>
                   </div>
@@ -228,7 +183,7 @@
                           </ul>
                           <div class="d-flex gap-2">
                               <a href="#" class="btn btn-primary">Saber más</a>
-                              <a href="#" class="btn btn-outline-success">Cotizar</a>
+                              <a href="#" class="btn btn-outline-secondary">Cotizar</a>
                           </div>
                       </div>
                   </div>
@@ -250,7 +205,7 @@
                           </ul>
                           <div class="d-flex gap-2">
                               <a href="#" class="btn btn-primary">Ver casos</a>
-                              <a href="#" class="btn btn-outline-success">Solicitar demo</a>
+                              <a href="#" class="btn btn-outline-secondary">Solicitar demo</a>
                           </div>
                       </div>
                   </div>
@@ -458,102 +413,49 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <!-- CTA Section: ¿Quieres hacer negocio? ¡Hablemos! -->
+    <section id="cta-negocio" class="cta-negocio py-5">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col text-center" data-aos="fade-up">
-            <h2 class="fw-bold"><i class="fas fa-envelope-open-text me-2"></i>Contacto</h2>
-            <p class="text-muted">Cuéntanos tu idea y construyamos algo increíble.</p>
-          </div>
-        </div>
-        <div class="row align-items-center g-4">
-          <!-- Formulario 6 columnas -->
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
-            <div class="card shadow-sm border-0">
-              <div class="card-body">
-                <h5 class="fw-bold mb-3"><i class="fas fa-comments me-2"></i>Hablemos de tu proyecto</h5>
-                <form>
-                  <div class="row g-3">
-                    <div class="col-12">
-                      <label class="form-label">Nombre completo</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Tu nombre" required />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Teléfono</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                        <input type="tel" class="form-control" placeholder="Tu teléfono" required />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Correo</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        <input type="email" class="form-control" placeholder="Tu correo" required />
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label">Servicio de interés</label>
-                      <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
-                        <select class="form-select" required>
-                          <option value="" selected disabled>Selecciona un servicio</option>
-                          <option>Desarrollo Web</option>
-                          <option>Diseño UI/UX</option>
-                          <option>Generación de Leads</option>
-                          <option>Kommo CRM</option>
-                          <option>Paid Media</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label">Mensaje</label>
-                      <textarea class="form-control" rows="4" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-end mt-3">
-                    <button class="btn btn-success"><i class="fas fa-paper-plane me-2"></i>Contactar ahora</button>
-                  </div>
-                </form>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+              <div class="row align-items-center g-4">
+                <div class="col-md-8">
+                  <h2 class="display-6 fw-bold mb-2">¿Quieres hacer negocio?</h2>
+                  <p class="lead mb-0 text-light">Conversemos una estrategia clara para captar leads y acelerar tus ventas.</p>
+                </div>
+                <div class="col-md-4 text-md-start">
+                  <a href="contact-wizard.html" class="btn btn-light btn-lg">
+                    ¡Hablemos!
+                  </a>
+                </div>
             </div>
           </div>
-          <!-- Imagen/gráfico animado 6 columnas -->
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
-            <div class="text-center">
-              <img class="img-fluid rounded float-anim shadow" alt="Ilustración de contacto"
-                   src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1200&q=80" />
-              <p class="text-muted mt-3">Visualizamos tus ideas y las convertimos en resultados.</p>
-            </div>
           </div>
-        </div>
       </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="site-footer bg-dark text-light">
+     <!-- Footer from index -->
+   <footer class="site-footer bg-dark text-light">
         <div class="container py-5">
             <div class="row g-4">
                 <!-- Column 1: Logo y contacto -->
                 <div class="col-12 col-md-3">
-                    <div class="brand mb-2">ARIELOZAM</div>
+                    <div class="brand mb-2"><img src="assets/img/logo_white_wt.png" alt="arielozam logo" width="256"></div>
                     <p class="text-secondary">Consultoría y desarrollo para impulsar tu negocio digital.</p>
                     <div class="d-flex flex-column gap-2 mt-3">
                         <div class="contact-item">
                             <span class="text-secondary">Email:</span>
-                            <a class="text-light" href="mailto:hola@arielozam.com">hola@arielozam.com</a>
+                            <a class="text-light" href="mailto:ariellozam.dev@gmail.com">ariellozam.dev@gmail.com</a>
                         </div>
                         <div class="contact-item">
                             <span class="text-secondary">Tel:</span>
-                            <a class="text-light" href="tel:+521234567890">+52 123 456 7890</a>
+                            <a class="text-light" href="tel:+523311153802">+52 33 1115 3802</a>
                         </div>
                         <div class="contact-item">
                             <span class="text-secondary">Ubicación:</span>
-                            <span class="text-light">CDMX, México</span>
+                            <span class="text-light">Guadalajara, Jalisco</span>
                         </div>
                     </div>
                 </div>
@@ -566,7 +468,7 @@
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Sobre mí</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Servicios</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Portafolio</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Contacto</a></li>
+                        <li class="nav-item mb-2"><a href="#cta-negocio" class="nav-link p-0 text-light">Contacto</a></li>
                     </ul>
                 </div>
 

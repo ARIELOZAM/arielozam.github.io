@@ -807,6 +807,20 @@ body {
     margin-right: 8px;
     font-size: 0.9em;
 }
+/* Override para tech-nav: sin subrayado y fondo sólido en hover */
+.tech-nav .nav-link {
+    border-radius: 0;
+    padding: 10px 8px !important;
+}
+.tech-nav .nav-link:before {
+    content: none !important;
+    display: none !important;
+}
+.tech-nav .nav-link:hover,
+.tech-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff !important;
+}
 
 .hamburger-tech {
     border: none;
